@@ -1,0 +1,170 @@
+%% 准备仿真参数
+% 系统参数
+% 模型名称
+modelname = 'model_3dof_lateral_carsim.slx';
+% 仿真时间
+para_dura = 1200;  % 实验时间
+para_sim_step = 5e-4/2;  % 仿真时间步
+para_resamples = 1e2;  % 数据采样倍数
+% 信号说明
+% y(t): "ydot", "yaw rate"
+% u(t): "WhlAngF" "xdot" "Fw", "WindX", "WindY", "WindZ"
+para_yselect = [1 1];
+para_uselect = [1]; %#ok<NBRAK2> % 指定选择哪些输入信号, 详见genSystemInfo()
+% 输入信号上下限
+para_usat = [-10 10];  % deg2rad(10);
+% 噪声参数 (nan表示不加噪声)
+para_ysnr = 80*ones(sum(para_yselect), 1);
+para_usnr = 80*para_uselect.';
+
+% 辨识参数
+% 激励周期
+para_period = 95;  % 一周期真实秒数
+para_sim_period_samples = para_period*fix(1/(para_sim_step*para_resamples));  % 一周期的采样数
+% 激励频率
+para_freqs = [0 0.5 0.6 0.7 0.8 0.9 1 2 3 4 5];
+% 算法参数
+iden_cutstart = 1;  % 切除最开始的周期
+iden_upxsize = 6;   % X的变量数上界
+iden_xsize = 4;  % 固定情况下的X的变量数
+iden_dtype = 'null';  % 是否假定D矩阵为0
+
+% 时间计算
+para_sim_samples = para_dura*fix(1/para_sim_step);  % 仿真采样数
+para_sim_span = 0:para_sim_step:(para_sim_samples-1)*para_sim_step;  % 仿真时刻
+% 构造参数结构体
+para_ysize = sum(para_yselect);
+para_usize = sum(para_uselect);
+paraStruct = genSystemInfo( ...
+    'Step', para_sim_step, 'Period', para_period, ...
+    'YSize', para_ysize, 'USize', para_usize, 'Freqs', para_freqs, ...
+    'USat', para_usat, 'USelect', para_uselect, ...
+    'USnr', para_usnr, 'YSnr', para_ysnr);
+% 随机初始参数
+para_vinit = paraStruct.VInit;
+% 仿真/辨识系统参数
+para_vsize = paraStruct.VSize;
+para_mats = paraStruct.Sv;
+para_matu = paraStruct.Uv;
+para_sim_usize = paraStruct.SimUSize;
+para_sim_matu = paraStruct.SimUv;
+para_sim_matk = paraStruct.SimKw;
+
+%% 确定激励信号功率, 用于添加激励噪声
+% 仿真激励系统
+[~, ~, sim_ut] = genExcitation(paraStruct, para_sim_step*para_resamples, fix(para_sim_samples/(2*para_resamples)), para_vinit);
+% 计算激励信号功率
+ut_pwr = genPower(sim_ut, para_sim_usize);
+% 调整运行参数
+if sum(isnan(para_usnr)), sim_usnr = zeros(para_sim_usize, 1); 
+else, sim_usnr = para_usnr; end
+% 仿真控制信号
+sim_iun = Simulink.Parameter(sum(isnan(para_usnr))); 
+
+%% 进行模型仿真
+% 运行仿真
+sim_outputs = sim(modelname);
+
+% 确定时刻和采样数
+t = sim_outputs.vt.Time;
+iden_samples = sim_outputs.vt.Length;
+% 提取数据
+unt = anaGetSimout(sim_outputs.ut, para_uselect);
+yt = anaGetSimout(sim_outputs.yt, para_yselect);
+
+% 添加输出噪声
+ynt = genNoiseAdder(yt, para_ysnr, iden_samples, para_ysize);
+% plot(t, ynt)
+
+%% 辨识系统参数
+
+% 辨识
+est_Init = idenDCISSIMLaucher(unt.', 'y_size', size(ynt, 2), 'u_size', size(unt, 2), 'period_samples', para_sim_period_samples, 'cutted_periods', iden_cutstart, ...
+'dcissim_type', 'offline', 'isim_excitation_type', 'reduced', 'x_size_upbound', iden_upxsize, 'sim_ss_bdx_type', 'analytical', 'sim_ss_d_type', iden_dtype, 'cov_cross_type', 'null', ...
+'sim_x_size_type', 'fixed', 'sim_x_size', 5, 'cov_order_type', 'null');
+est_Struct = idenDCISSIMRunner(est_Init, ynt.', unt.');
+
+% 读取结果 (注意时域转换)
+% 系统参数
+est_SSModel = idss(est_Struct.A, est_Struct.B, est_Struct.C, est_Struct.D, ...
+    zeros(size(est_Struct.A, 1), size(est_Struct.C, 1)), zeros(size(est_Struct.A, 1), 1), para_sim_step*para_resamples);
+est_SSModel_conti = d2c(est_SSModel, 'zoh');
+est_A = est_SSModel_conti.A; est_B = est_SSModel_conti.B; est_C = est_SSModel_conti.C; est_D = est_SSModel_conti.D;
+% 系统初值
+est_xinit = est_SSModel.x0;
+
+% 输出A矩阵特征值
+disp(['The eigenvalues of A in cISSIM are: ', mat2str(eig(est_A), 4)]);
+
+%% 分析用无噪声输出
+% 节约时间, 只分析几个周期
+para_ana_dura = 3 * para_period;
+para_ana_samples = para_ana_dura*fix(1/(para_sim_step*para_resamples));
+
+% 原系统无扰动仿真
+if ~sum(isnan(para_usnr))
+    sim_usnr = zeros(para_sim_usize, 1); sim_iun = Simulink.Parameter(1);
+    ana_ori_out = sim(modelname);
+    ana_ori_yt = anaGetSimout(ana_ori_out.yt, para_yselect);
+else
+    ana_ori_yt = yt;
+end
+ana_ori_yt = ana_ori_yt(iden_cutstart*para_sim_period_samples+1:para_ana_samples, :);
+
+
+%% 时域分析
+% 辨识系统仿真 (可能差一位数据)
+ana_t = 0:para_sim_step*para_resamples:(para_ana_samples-1)*para_sim_step*para_resamples;
+[~, ~, ana_ut] = genExcitation(paraStruct, para_sim_step*para_resamples, para_ana_samples, para_vinit);
+ana_ut = ana_ut(1:para_ana_samples, :);
+ana_ind_yt = sim(est_SSModel, ana_ut, simOptions('InitialCondition', 'z'));  % 默认无噪声, 零初始值
+ana_ind_yt = ana_ind_yt(iden_cutstart*para_sim_period_samples+1:para_ana_samples, :);
+
+% 绘图
+% anaPlot(ana_t, {ana_ori_yt}, {ana_ind_yt}, ...
+%     'Time Response of Original and Indentified System (cISSIM)', 'plot');
+% 计算拟合指标
+[ana_time_FF, ana_time_VAF] = anaTimeMetric(ana_ori_yt, ana_ind_yt, para_ysize);
+
+%% 输出信号频域分解对比
+% 直接使用前面的数据
+% 选择频率
+ana_freq_srate = ana_t(2) - ana_t(1);
+ana_freq_slength = size(ana_ind_yt, 1);
+ana_freq_axis = (0:ana_freq_slength-1).*((1/ana_freq_srate)/ana_freq_slength);
+% 真实系统频域参数提取
+[ana_freq_ori_amp, ana_freq_ori_phase, ana_freq_ori_freq] = anaFreqPara(ana_ori_yt, ana_freq_srate, ana_freq_axis);
+% 辨识系统仿真参数提取
+[ana_freq_ind_amp, ana_freq_ind_phase, ana_freq_ind_freq] = anaFreqPara(ana_ind_yt, ana_freq_srate, ana_freq_axis);
+% 绘图
+anaPlot(ana_freq_ori_freq, {ana_freq_ori_amp, ana_freq_ori_phase}, {ana_freq_ind_amp, ana_freq_ind_phase}, ...
+    'Frequency Parameters of Original and Indentified System (cISSIM)', 'semilogx');
+
+%% N4SID辨识系统参数
+% load('..\saved_results\lateral_carsim.mat')
+sid_Data = iddata(ynt, unt, para_sim_step*para_resamples);
+sid_Option = n4sidOptions('InitialState', 'zero', ...  % 初态为0
+            'Focus', 'prediction'); % , ...  % 最小化(一步)预测误差
+            % 'EnforceStability', true);  % 确保稳定性
+sid_Model = n4sid(sid_Data, 4, sid_Option);
+sid_Model_conti =d2c(sid_Model, 'zoh');
+% 输出A矩阵特征值
+disp(['The eigenvalues of A in SID are: ', mat2str(eig(sid_Model_conti.A), 4)]);
+
+%% N4SID时域分析
+% 无扰动输入输出信号(直接使用前面的信号)
+ana_sid_yt = sim(sid_Model, ana_ut, simOptions('InitialCondition', 'z'));  % 默认无噪声, 零初始值
+ana_sid_yt = ana_sid_yt(iden_cutstart*para_sim_period_samples+1:para_ana_samples, :);
+% 绘图
+% anaPlot(ana_t, {ana_ori_yt}, {ana_sid_yt}, ...
+%     'Time Response of Original and Indentified System (SID)', 'plot');
+% 计算拟合指标
+[ana_time_FF_sid, ana_time_VAF_sid] = anaTimeMetric(ana_ori_yt, ana_sid_yt, para_ysize);
+
+%% N4SID频域分析
+% 同样直接使用前面的数据, 辨识系统仿真参数提取
+[ana_freq_sid_amp, ana_freq_sid_phase, ana_freq_sid_freq] = anaFreqPara(ana_sid_yt, ana_freq_srate, ana_freq_axis);
+% 绘图
+anaPlot(ana_freq_ori_freq, {ana_freq_sid_amp, ana_freq_sid_phase}, {ana_freq_sid_amp, ana_freq_sid_phase}, ...
+    'Frequency Parameters of Original and Indentified System (SID)', 'semilogx');
+
