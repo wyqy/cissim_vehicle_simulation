@@ -1,0 +1,3939 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    167671,       3931]
+NotebookOptionsPosition[    159162,       3774]
+NotebookOutlinePosition[    159621,       3793]
+CellTagsIndexPosition[    159578,       3790]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$Assumptions", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$Assumptions", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Notation`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Symbolize", "[", 
+   RowBox[{"ParsedBoxWrapper", "[", 
+    RowBox[{"SubscriptBox", "[", 
+     RowBox[{"\"\<_\>\"", ",", "\"\<_\>\""}], "]"}], "]"}], "]"}], 
+  ";"}]}], "Code",
+ CellLabel->"In[1]:=",ExpressionUUID->"6d1918bb-3ab5-48e3-b823-413425717d04"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Join", "incpt", 
+   "\"\:65e0\:6cd5\:5408\:5e76 \\!\\(\\*RowBox[{\\\"Join\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"\[LeftAssociation]\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"intt\\\\\\\"\\\", \\\"\[Rule]\\\", \
+RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\"\\\", \
+\\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
+\\\\\\\"\[DifferentialD]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\
+\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\
+\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\\\\\\\"dintt\\\\\\\"\\\", \\\"\
+\[Rule]\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"SubsuperscriptBox\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\
+\"\\\", \\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\\\\\"\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
+\\\\\\\"\[Placeholder]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"\[DifferentialD]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\
+\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \
+\\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"rintt\\\\\\\"\\\", \\\"\[Rule]\\\", \
+RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"UnderscriptBox\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"\[Element]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\
+\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"42\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"cS\\\\\\\"\\\", \\\"\
+\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorS\\\\\\\"\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\\\\\\\"cW\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\
+\", RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorW\\\\\\\"\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\\\\\\\"cY\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\
+\", RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorY\\\\\\\"\\\"}], \\\"]\\\"}]}]}], \\\"\
+\[RightAssociation]\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\
+\\\\\\\"notation\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Notation\\\\\\\"\\\", \\\",\
+\\\", \\\"\\\\\\\"[\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}]}], \
+\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"8\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"16\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"]\\\"}]\\) \:4e2d\:7684\:4e0d\
+\:517c\:5bb9\:5143\:7d20.\"", 2, 4, 1, 24773073315366278863, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.873769077880153*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[1]:=",ExpressionUUID->"0097dc67-38fa-459e-a9c8-\
+0ad35a696b53"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Join", "incpt", 
+   "\"\:65e0\:6cd5\:5408\:5e76 \\!\\(\\*RowBox[{\\\"Join\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"\[LeftAssociation]\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"intt\\\\\\\"\\\", \\\"\[Rule]\\\", \
+RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\"\\\", \
+\\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
+\\\\\\\"\[DifferentialD]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\
+\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\
+\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\\\\\\\"dintt\\\\\\\"\\\", \\\"\
+\[Rule]\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"SubsuperscriptBox\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\
+\"\\\", \\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\\\\\"\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
+\\\\\\\"\[Placeholder]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"\[DifferentialD]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\
+\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"}\\\"}], \
+\\\"]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"rintt\\\\\\\"\\\", \\\"\[Rule]\\\", \
+RowBox[{\\\"RowBox\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"UnderscriptBox\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"\
+\[Integral]\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"\[SelectionPlaceholder]\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"\[Element]\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"\
+\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\"]\\\"}], \
+\\\",\\\", \\\"\\\\\\\"\[Placeholder]\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"42\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"cS\\\\\\\"\\\", \\\"\
+\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorS\\\\\\\"\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\\\\\\\"cW\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\
+\", RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorW\\\\\\\"\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\\\\\\\"cY\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"TemplateBox\\\", \\\"[\\\
+\", RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"CombinatorY\\\\\\\"\\\"}], \\\"]\\\"}]}]}], \\\"\
+\[RightAssociation]\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\
+\\\\\\\"notation\\\\\\\"\\\", \\\"\[Rule]\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Notation\\\\\\\"\\\", \\\",\
+\\\", \\\"\\\\\\\"[\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"RowBox\\\", \
+\\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"]\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}]}], \
+\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"8\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"17\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"]\\\"}]\\) \:4e2d\:7684\:4e0d\
+\:517c\:5bb9\:5143\:7d20.\"", 2, 4, 2, 24773073315366278863, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.873769078000412*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[1]:=",ExpressionUUID->"956c0ec4-cdde-4d57-a05c-\
+ba498ea100df"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3dof lateral - longitudinal model of a vehicle body", "Section",
+ CellChangeTimes->{{3.871804191546198*^9, 3.8718042076998777`*^9}, {
+  3.871805267686581*^9, 
+  3.8718053113742666`*^9}},ExpressionUUID->"f68ae914-d3d1-4a12-9050-\
+53a9bfce32c7"],
+
+Cell["\<\
+introduction:
+1. axle forces: external longitudinal velocity, external longitudinal forces, \
+external forces.
+\t1) external longitudinal velocity: assume it is quasi-steady state, so the \
+longitudinal acceleration is approximately zero.
+\t\tlateral forces are computed using the tire slip angles and linear \
+cornering stiffness.
+\t2) external longitudinal forces: use the external longitudinal force to \
+accelerate or brake the vehicle.
+\t\tlateral forces are computed using the tire slip angles and linear \
+cornering stiffness.
+\t3) external forces: use the external lateral and longitudinal forces to \
+steer, accelerate, or brake the vehicle.
+\t\tthe steering angle input are not used (the tire models are the most \
+accurate and non-linearized).
+2. two modes: single track (bicycle) & dual tracks.\
+\>", "Text",
+ CellChangeTimes->{{3.871805319532525*^9, 3.871805664253191*^9}, {
+  3.871805718939174*^9, 3.8718057565710225`*^9}, {3.871865198822459*^9, 
+  3.871865227796397*^9}, {3.871878870812145*^9, 
+  3.87187887859464*^9}},ExpressionUUID->"55e3a984-a70f-47b2-85e1-\
+2d0c178f85d9"]
+}, Open  ]],
+
+Cell["single track", "Section",
+ CellChangeTimes->{{3.872021486405628*^9, 
+  3.872021497718215*^9}},ExpressionUUID->"857f841a-dea8-4d25-8f4b-\
+fe73dea0a43c"],
+
+Cell[CellGroupData[{
+
+Cell["dual track", "Section",
+ CellChangeTimes->{{3.8718652359015503`*^9, 3.871865237945243*^9}, {
+  3.8718703463096757`*^9, 
+  3.871870346628492*^9}},ExpressionUUID->"d83646a7-a6e5-46ae-b710-\
+1863539aa70c"],
+
+Cell[CellGroupData[{
+
+Cell["Original Equation", "Subsection",
+ CellChangeTimes->{{3.871878766774028*^9, 
+  3.871878785840907*^9}},ExpressionUUID->"7cb690b6-61f5-4758-9d9b-\
+67543efdaee5"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+external forces
+d for drag\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.871864927652447*^9, 3.8718649360100675`*^9}, {
+  3.8718789021529813`*^9, 
+  3.871878914441185*^9}},ExpressionUUID->"51fe12ca-3e97-42f1-9d5e-\
+6bc65bff7de5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdx", "[", "t", "]"}], "+", 
+    RowBox[{"Fxinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdy", "[", "t", "]"}], "+", 
+    RowBox[{"Fyinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdz", "[", "t", "]"}], "+", 
+    RowBox[{"Fzinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Mxext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdx", "[", "t", "]"}], "+", 
+    RowBox[{"Mxinput", "[", "t", "]"}]}]}], ";", 
+  RowBox[{
+   RowBox[{"Myext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdy", "[", "t", "]"}], "+", 
+    RowBox[{"Myinput", "[", "t", "]"}]}]}], ";", 
+  RowBox[{
+   RowBox[{"Mzext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdz", "[", "t", "]"}], "+", 
+    RowBox[{"Mzinput", "[", "t", "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.871864943005123*^9, 3.871864987728237*^9}, {
+  3.871865134493534*^9, 3.871865182431216*^9}, {3.8718662371158867`*^9, 
+  3.8718662726372285`*^9}, {3.871866306590562*^9, 3.871866308251536*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"38a49311-40e0-4ffe-be04-40713bf57035"]
+}, Open  ]],
+
+Cell["axle forces", "Subsubsection",
+ CellChangeTimes->{{3.871806071317935*^9, 3.8718061002050505`*^9}, {
+  3.871862455914454*^9, 3.871862456845574*^9}, {3.8718649228602905`*^9, 
+  3.871864939796283*^9}, {3.8718653988255157`*^9, 3.8718654371837873`*^9}, {
+  3.871866563770932*^9, 
+  3.8718665853711023`*^9}},ExpressionUUID->"fee643f2-8277-4cbd-9b64-\
+f02487657f6d"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+1 for \[OpenCurlyDoubleQuote]external longitudinal velocity\
+\[CloseCurlyDoubleQuote], 2 for \[OpenCurlyDoubleQuote]external longitudinal \
+forces\[CloseCurlyDoubleQuote]\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.8718665763595657`*^9, 3.871866584198907*^9}, 
+   3.8718788558417397`*^9},ExpressionUUID->"e156a7dd-b6c8-4f65-a439-\
+918debc2b046"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"AxleType", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Switch", "[", 
+   RowBox[{"AxleType", ",", "\[IndentingNewLine]", "1", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxflt", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxfrt", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrlt", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrrt", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyflt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfl"}], " ", 
+        RowBox[{"\[Alpha]fl", "[", "t", "]"}], " ", "\[Mu]fl", " ", 
+        FractionBox[
+         RowBox[{"Fzfl", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyfrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfr"}], " ", 
+        RowBox[{"\[Alpha]fr", "[", "t", "]"}], " ", "\[Mu]fr", " ", 
+        FractionBox[
+         RowBox[{"Fzfr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrlt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrl"}], " ", 
+        RowBox[{"\[Alpha]rl", "[", "t", "]"}], " ", "\[Mu]rl", " ", 
+        FractionBox[
+         RowBox[{"Fzrl", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrr"}], " ", 
+        RowBox[{"\[Alpha]rr", "[", "t", "]"}], " ", "\[Mu]rr", " ", 
+        FractionBox[
+         RowBox[{"Fzrr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";"}], "}"}], ",", 
+    "\[IndentingNewLine]", "2", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxflt", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxflinput", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxfrt", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxfrinput", "[", "t", "]"}]}], 
+      RowBox[{"(*", 
+       RowBox[{"Fxlrinput", " ", "?"}], "*)"}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrlt", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxrlinput", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrrt", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxrrinput", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyflt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfl"}], " ", 
+        RowBox[{"\[Alpha]fl", "[", "t", "]"}], " ", "\[Mu]fl", " ", 
+        FractionBox[
+         RowBox[{"Fzfl", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyfrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfr"}], " ", 
+        RowBox[{"\[Alpha]fr", "[", "t", "]"}], " ", "\[Mu]fr", " ", 
+        FractionBox[
+         RowBox[{"Fzfr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrlt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrl"}], " ", 
+        RowBox[{"\[Alpha]rl", "[", "t", "]"}], " ", "\[Mu]rl", " ", 
+        FractionBox[
+         RowBox[{"Fzrl", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrr"}], " ", 
+        RowBox[{"\[Alpha]rr", "[", "t", "]"}], " ", "\[Mu]rr", " ", 
+        FractionBox[
+         RowBox[{"Fzrr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}]}], ";"}], "}"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.8718047073121843`*^9, 3.871804711234461*^9}, {
+   3.871804755179414*^9, 3.8718047811522217`*^9}, 3.8718050597748404`*^9, {
+   3.871805911770745*^9, 3.8718059500280495`*^9}, {3.871806104820155*^9, 
+   3.8718061320018215`*^9}, {3.8718061968322463`*^9, 3.871806335251216*^9}, {
+   3.871862166700513*^9, 3.871862173797427*^9}, {3.8718622131760693`*^9, 
+   3.871862334042043*^9}, {3.8718623860688267`*^9, 3.8718624592271547`*^9}, {
+   3.8718625172806196`*^9, 3.8718625707683644`*^9}, {3.8718647561644077`*^9, 
+   3.8718648380162125`*^9}, {3.8718653668714924`*^9, 
+   3.8718653854605165`*^9}, {3.871865481454174*^9, 3.8718655924250975`*^9}, {
+   3.87186562265906*^9, 3.871865754437318*^9}, {3.871865808071745*^9, 
+   3.871865814191986*^9}, {3.871865877551834*^9, 3.8718658808880835`*^9}, {
+   3.871866125404023*^9, 3.8718661263439145`*^9}, {3.871866311934678*^9, 
+   3.871866328878888*^9}, {3.871866850650244*^9, 3.8718668600141087`*^9}, {
+   3.8718702205031347`*^9, 3.871870231721719*^9}, {3.8718788489484224`*^9, 
+   3.8718788508231773`*^9}, {3.8718792686496654`*^9, 3.8718792744530888`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"7e1c9adc-ae99-47ee-99ad-ada31de76af9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+weight and load transfer by varying the effective friction parameters\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.8718640143892107`*^9, 
+  3.871864051367632*^9}},ExpressionUUID->"deb0b4d8-8456-45ad-99ea-\
+6a523adf554c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzf", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"a", "+", "b"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"b", " ", "m", " ", "g"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"ddx", "[", "t", "]"}], "-", 
+         RowBox[{
+          RowBox[{"dy", "[", "t", "]"}], " ", 
+          RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}], " ", "m", " ", "h"}],
+       "+", 
+      RowBox[{"h", " ", 
+       RowBox[{"Fxext", "[", "t", "]"}]}], "+", 
+      RowBox[{"b", " ", 
+       RowBox[{"Fzext", "[", "t", "]"}]}], "-", 
+      RowBox[{"Myext", "[", "t", "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"a", "+", "b"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"a", " ", "m", " ", "g"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"ddx", "[", "t", "]"}], "-", 
+         RowBox[{
+          RowBox[{"dy", "[", "t", "]"}], " ", 
+          RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}], " ", "m", " ", "h"}],
+       "-", 
+      RowBox[{"h", " ", 
+       RowBox[{"Fxext", "[", "t", "]"}]}], "+", 
+      RowBox[{"a", " ", 
+       RowBox[{"Fzext", "[", "t", "]"}]}], "+", 
+      RowBox[{"Myext", "[", "t", "]"}]}], ")"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8718640649922276`*^9, 3.871864086060963*^9}, {
+  3.8718645435103016`*^9, 3.8718646736495037`*^9}, {3.8718647060013247`*^9, 
+  3.871864721728368*^9}, {3.8718663343093033`*^9, 3.8718663347736034`*^9}, {
+  3.871871491893877*^9, 3.871871497127239*^9}, {3.8718732670185833`*^9, 
+  3.8718732670209274`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"1e7381d8-c08b-4270-aaed-36c2d25b006a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["pitch and roll equilibrium", "Subsubsection",
+ CellChangeTimes->{{3.871806354083642*^9, 3.871806368802189*^9}, {
+  3.8718624393942623`*^9, 
+  3.8718624706614733`*^9}},ExpressionUUID->"d92f069f-050a-4e03-a4b9-\
+b52a5b431fd8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzfl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fzf", "[", "t", "]"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"m", " ", "h", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"ddy", "[", "t", "]"}], "+", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], " ", 
+           RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}]}], "-", 
+       RowBox[{"h", " ", 
+        RowBox[{"Fyext", "[", "t", "]"}]}], "-", 
+       RowBox[{"Mxext", "[", "t", "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "/", "wf"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzfr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fzf", "[", "t", "]"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "m"}], " ", "h", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"ddy", "[", "t", "]"}], "+", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], " ", 
+           RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}]}], "+", 
+       RowBox[{"h", " ", 
+        RowBox[{"Fyext", "[", "t", "]"}]}], "+", 
+       RowBox[{"Mxext", "[", "t", "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "/", "wf"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzrl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fzr", "[", "t", "]"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"m", " ", "h", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"ddy", "[", "t", "]"}], "+", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], " ", 
+           RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}]}], "-", 
+       RowBox[{"h", " ", 
+        RowBox[{"Fyext", "[", "t", "]"}]}], "-", 
+       RowBox[{"Mxext", "[", "t", "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "/", "wr"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzrr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fzr", "[", "t", "]"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "m"}], " ", "h", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"ddy", "[", "t", "]"}], "+", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], " ", 
+           RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}]}], "+", 
+       RowBox[{"h", " ", 
+        RowBox[{"Fyext", "[", "t", "]"}]}], "+", 
+       RowBox[{"Mxext", "[", "t", "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "/", "wr"}], ")"}]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8718650409385633`*^9, 3.8718651037053213`*^9}, {
+  3.8718658602623944`*^9, 3.8718658626699553`*^9}, {3.871865906110291*^9, 
+  3.871865916291573*^9}, {3.871865987909777*^9, 3.8718660166233053`*^9}, {
+  3.871866061025256*^9, 3.87186611270166*^9}, {3.871866149297783*^9, 
+  3.871866156655913*^9}, {3.871871508715898*^9, 3.8718715105147657`*^9}, {
+  3.8718732670239196`*^9, 3.8718732670309296`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"fcad46cd-6f5b-447d-9ffa-8cddac834bc9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["slip angles", "Subsubsection",
+ CellChangeTimes->{{3.871866178856978*^9, 
+  3.871866184179761*^9}},ExpressionUUID->"6b626583-374c-4471-84a9-\
+688112e8acc9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]fl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"ArcTan", "[", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], "+", 
+       RowBox[{"a", " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"dx", "[", "t", "]"}], "+", 
+       RowBox[{
+        RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+        FractionBox["wf", "2"]}]}]], "]"}], "-", 
+    RowBox[{"\[Delta]fl", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]fr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"ArcTan", "[", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], "+", 
+       RowBox[{"a", " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"dx", "[", "t", "]"}], "-", 
+       RowBox[{
+        RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+        FractionBox["wf", "2"]}]}]], "]"}], "-", 
+    RowBox[{"\[Delta]fr", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]rl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"ArcTan", "[", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], "-", 
+       RowBox[{"b", " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"dx", "[", "t", "]"}], "+", 
+       RowBox[{
+        RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+        FractionBox["wr", "2"]}]}]], "]"}], "-", 
+    RowBox[{"\[Delta]rl", "[", "t", "]"}]}]}], 
+  RowBox[{"(*", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"dy", "[", "t", "]"}], "-", 
+      RowBox[{"a", " ", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+     RowBox[{
+      RowBox[{"dx", "[", "t", "]"}], "+", 
+      RowBox[{
+       RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+       FractionBox["wr", "2"]}]}]], " ", "?"}], "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Alpha]rr", "[", "t_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"ArcTan", "[", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"dy", "[", "t", "]"}], "-", 
+        RowBox[{"b", " ", 
+         RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+       RowBox[{
+        RowBox[{"dx", "[", "t", "]"}], "-", 
+        RowBox[{
+         RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+         FractionBox["wr", "2"]}]}]], "]"}], "-", 
+     RowBox[{"\[Delta]rr", "[", "t", "]"}]}]}], 
+   RowBox[{"(*", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], "-", 
+       RowBox[{"a", " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+      RowBox[{
+       RowBox[{"dx", "[", "t", "]"}], "-", 
+       RowBox[{
+        RowBox[{"d\[Psi]", "[", "t", "]"}], " ", 
+        FractionBox["wr", "2"]}]}]], " ", "?"}], "*)"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"approximation", " ", "?"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Delta]fl", "[", "t_", "]"}], ":=", 
+   RowBox[{"\[Delta]f", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Delta]fr", "[", "t_", "]"}], ":=", 
+   RowBox[{"\[Delta]f", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Delta]rl", "[", "t_", "]"}], ":=", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Delta]rr", "[", "t_", "]"}], ":=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.871866188011632*^9, 3.871866225296959*^9}, {
+  3.871866288380224*^9, 3.871866299506493*^9}, {3.8718663399000044`*^9, 
+  3.8718664236078367`*^9}, {3.8718700639829865`*^9, 3.8718700857251377`*^9}, {
+  3.871870259759618*^9, 3.8718702640716577`*^9}, {3.8718707311041546`*^9, 
+  3.8718707521342*^9}, {3.871871561410223*^9, 3.8718715695023537`*^9}, {
+  3.871873267035915*^9, 3.8718732670648108`*^9}, {3.8718787229340057`*^9, 
+  3.871878725568394*^9}, {3.871974175224202*^9, 3.8719742033885903`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"44e1324b-eb98-4c6a-8580-a400b9f849b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["steering angles of the tire(wheel)", "Subsubsection",
+ CellChangeTimes->{{3.8718664677710867`*^9, 
+  3.8718664998271437`*^9}},ExpressionUUID->"f35dd7ee-61d9-4ae6-9781-\
+9d07de5fb70c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxfl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxflt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyflt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxfr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxfrt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyfrt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyfl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxflt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"Fyflt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyfr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxfrt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"Fyfrt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxrl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxrlt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyrlt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxrr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxrrt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyrrt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyrl", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxrlt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyrlt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyrr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxrrt", "[", "t", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"Fyrrt", "[", "t", "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8718665047240944`*^9, 3.871866523950156*^9}, {
+   3.87186661416522*^9, 3.871866650968356*^9}, {3.8718667241250973`*^9, 
+   3.8718668151142697`*^9}, {3.871870845654951*^9, 3.871870928635846*^9}, {
+   3.8718710547263627`*^9, 3.8718711279471145`*^9}, 3.8718716237092657`*^9, {
+   3.8718751205858393`*^9, 3.871875144673234*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"dea00c67-2251-4388-b5ec-00146c819b43"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["drag forces by wind", "Subsubsection",
+ CellChangeTimes->{{3.8718669407436595`*^9, 3.871866945676675*^9}, {
+  3.871866993011753*^9, 3.8718670035478635`*^9}, {3.871868444095379*^9, 
+  3.8718684451665363`*^9}},ExpressionUUID->"a3a91faa-3854-43c4-8ecd-\
+20aead1efa5d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"coordinate", " ", "transformation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"wx", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Wx", "[", "t", "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}], "+", 
+      RowBox[{
+       RowBox[{"Wy", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}]}]}], ";", 
+    RowBox[{
+     RowBox[{"wy", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Wy", "[", "t", "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Wx", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}]}]}], ";", 
+    RowBox[{
+     RowBox[{"wz", "[", "t_", "]"}], ":=", 
+     RowBox[{"Wz", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"simplified", " ", "airdynamics"}], ",", " ", 
+     RowBox[{"relative", " ", "airflow", " ", "speed"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"wmean", "[", "t_", "]"}], ":=", 
+     RowBox[{"\[Sqrt]", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], "-", 
+           RowBox[{"wx", "[", "t", "]"}]}], ")"}], "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"dx", "[", "t", "]"}], "-", 
+           RowBox[{"wx", "[", "t", "]"}]}], ")"}], "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"wz", "[", "t", "]"}], ")"}], "2"]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"drag", " ", "forces", " ", "by", " ", "wind"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fdx", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Cd", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fdy", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Cs", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fdz", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Cl", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mdx", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Crm", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"a", "+", "b"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mdy", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Cpm", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"a", "+", "b"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mdz", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", " ", "T", " ", "R"}]]}], "Cym", " ", "Af", " ", "Pabs", 
+      " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"a", "+", "b"}], ")"}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.871866948975943*^9, 3.871866970322162*^9}, {
+  3.8718670176474943`*^9, 3.87186735957485*^9}, {3.8718680310290585`*^9, 
+  3.8718680578811564`*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"0693832d-ad18-49e3-805a-e1c9d3485f74"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DYNAMICS", "Subsubsection",
+ CellChangeTimes->{{3.871868596042416*^9, 
+  3.8718686146683025`*^9}},ExpressionUUID->"4285180b-7b55-4787-8f3a-\
+38c5813724a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "ddx", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ddxRHS", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], " ", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "m"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Fxfl", "[", "t", "]"}], "+", 
+         RowBox[{"Fxfr", "[", "t", "]"}], "+", 
+         RowBox[{"Fxrl", "[", "t", "]"}], "+", 
+         RowBox[{"Fxrr", "[", "t", "]"}], "+", 
+         RowBox[{"Fxext", "[", "t", "]"}]}], ")"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ddxRHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.8718686160311394`*^9, 3.871868632852746*^9}, {
+   3.8718703681694136`*^9, 3.871870371852468*^9}, {3.871870403737612*^9, 
+   3.871870445588745*^9}, {3.871871241500949*^9, 3.871871293321433*^9}, {
+   3.8718713290963106`*^9, 3.8718713353161097`*^9}, {3.871871389040481*^9, 
+   3.871871403038582*^9}, {3.8718717756115274`*^9, 3.871871800080931*^9}, 
+   3.871873267070794*^9, 3.871873365907498*^9, {3.8718755998090487`*^9, 
+   3.871875603386011*^9}, 3.8718757353926854`*^9},
+ CellLabel->"In[47]:=",ExpressionUUID->"b8fdd4a7-7b18-4d53-b6b1-5108cabaa99b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Plus", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["38912", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  $CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t] + \
+$CellContext`m^(-1) (Cos[
+       $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fxflinput[$CellContext`t] + Cos[
+       $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fxfrinput[$CellContext`t] + $CellContext`Fxinput[$CellContext`t] + 
+    Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fxrlinput[$CellContext`t] + Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fxrrinput[$CellContext`t] + 
+    Rational[-1, 
+       2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+      2 ($CellContext`dx[$CellContext`t] - Cos[
+           $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+           $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + 
+    Rational[1, 2] $CellContext`Cyrl $CellContext`\[Mu]rl 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[
+         1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+    Rational[1, 2] $CellContext`Cyrr $CellContext`\[Mu]rr 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[-1, 
+          2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+    Rational[1, 
+       2] $CellContext`Cyfr $CellContext`\[Mu]fr \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+       $CellContext`\[Delta]f[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wf^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+      ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t]) + 
+    Rational[1, 
+       2] $CellContext`Cyfl $CellContext`\[Mu]fl \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+       $CellContext`\[Delta]f[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wf^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+      ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t])),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8718756478612146`*^9, 3.871875739032467*^9, 
+  3.871876044788768*^9, 3.871973753297475*^9, 3.871974207259381*^9, 
+  3.8719808962649417`*^9, 3.8737049664185114`*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"260b68b3-564a-4579-b0c1-4d98800d7015"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "ddy", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ddyRHS", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"dx", "[", "t", "]"}]}], " ", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "m"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Fyfl", "[", "t", "]"}], "+", 
+         RowBox[{"Fyfr", "[", "t", "]"}], "+", 
+         RowBox[{"Fyrl", "[", "t", "]"}], "+", 
+         RowBox[{"Fyrr", "[", "t", "]"}], "+", 
+         RowBox[{"Fyext", "[", "t", "]"}]}], ")"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ddyRHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.8718712807671185`*^9, 3.871871359805767*^9}, {
+   3.8718714082287703`*^9, 3.871871411157076*^9}, {3.8718718040455723`*^9, 
+   3.871871805257354*^9}, 3.871873267082763*^9, {3.8718755639250355`*^9, 
+   3.8718755671150846`*^9}, 3.871875737441864*^9},
+ CellLabel->"In[49]:=",ExpressionUUID->"41a18734-1560-4a85-8079-3d1497d5a5bf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Plus", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["38936", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  -$CellContext`dx[$CellContext`t] $CellContext`d\[Psi][$CellContext`t] + \
+$CellContext`m^(-1) ($CellContext`Fyinput[$CellContext`t] + \
+$CellContext`Fxflinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]f[$CellContext`t]] + \
+$CellContext`Fxfrinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]f[$CellContext`t]] + \
+$CellContext`Fxrlinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] + \
+$CellContext`Fxrrinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] + 
+    Rational[-1, 
+       2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+      2 ($CellContext`dx[$CellContext`t] - Cos[
+           $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+           $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + 
+    Rational[1, 2] $CellContext`Cyrl $CellContext`\[Mu]rl 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] 
+     Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+    Rational[1, 2] $CellContext`Cyrr $CellContext`\[Mu]rr 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[-1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] 
+     Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+    Rational[-1, 2] $CellContext`Cyfr $CellContext`\[Mu]fr Cos[
+       $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wf^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+      ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t]) + 
+    Rational[-1, 2] $CellContext`Cyfl $CellContext`\[Mu]fl Cos[
+       $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wf^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+      ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t])),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.871875606294648*^9, 3.8718757407724886`*^9, 
+  3.8718760448864765`*^9, 3.8719737533812447`*^9, 3.8719742073483157`*^9, 
+  3.8719808963605213`*^9, 3.873704966452068*^9},
+ CellLabel->"Out[50]=",ExpressionUUID->"be1cac5d-34d8-463b-b0c1-e6a244f7744b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "dr", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"dd\[Psi]RHS", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      FractionBox["1", "Izz"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Fyfl", "[", "t", "]"}], "+", 
+           RowBox[{"Fyfr", "[", "t", "]"}]}], ")"}]}], "-", 
+        RowBox[{"b", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Fyrl", "[", "t", "]"}], "+", 
+           RowBox[{"Fyrr", "[", "t", "]"}]}], ")"}]}], "+", 
+        FractionBox[
+         RowBox[{"wf", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Fxfl", "[", "t", "]"}], "-", 
+            RowBox[{"Fxfr", "[", "t", "]"}]}], ")"}]}], "2"], "+", 
+        FractionBox[
+         RowBox[{"wr", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Fxrl", "[", "t", "]"}], "-", 
+            RowBox[{"Fxrr", "[", "t", "]"}]}], ")"}]}], "2"], "+", 
+        RowBox[{"Mzext", "[", "t", "]"}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dd\[Psi]RHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.871871382967475*^9, 3.871871383711506*^9}, {
+   3.87187141724275*^9, 3.8718714778156624`*^9}, {3.8718716414327526`*^9, 
+   3.8718716773354607`*^9}, {3.8718717153232408`*^9, 
+   3.8718717210928755`*^9}, {3.8718718080253115`*^9, 3.871871810720909*^9}, {
+   3.8718753337594004`*^9, 3.8718753397260647`*^9}, {3.871875531214141*^9, 
+   3.8718755580778136`*^9}, 3.8718786962935677`*^9},
+ CellLabel->"In[51]:=",ExpressionUUID->"e846d855-e7ad-4a2b-8af6-a2be90ce399e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Times", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["76680", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  $CellContext`Izz^(-1) ($CellContext`Mzinput[$CellContext`t] + 
+   Rational[-1, 
+      2] $CellContext`Af ($CellContext`a + $CellContext`b) $CellContext`Cym \
+$CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+     2 ($CellContext`dx[$CellContext`t] - Cos[
+          $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+          $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`b ($CellContext`Fxrlinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] + \
+$CellContext`Fxrrinput[$CellContext`t] Sin[
+       $CellContext`\[Delta]r[$CellContext`t]] + 
+    Rational[1, 2] $CellContext`Cyrl $CellContext`\[Mu]rl 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] 
+     Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+    Rational[1, 2] $CellContext`Cyrr $CellContext`\[Mu]rr 
+     ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+       Rational[-1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] 
+     Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+      2 $CellContext`wr^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+          2 ($CellContext`dx[$CellContext`t] - Cos[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+               $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))))) + 
+   Rational[1, 2] $CellContext`wr (Cos[
+        $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fxrlinput[$CellContext`t] - Cos[
+       $CellContext`\[Delta]r[$CellContext`t]] \
+$CellContext`Fxrrinput[$CellContext`t] + 
+     Rational[1, 2] $CellContext`Cyrl $CellContext`\[Mu]rl 
+      ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[
+          1, 2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+        $CellContext`\[Delta]r[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wr^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) + 
+     Rational[-1, 2] $CellContext`Cyrr $CellContext`\[Mu]rr 
+      ArcTan[($CellContext`dy[$CellContext`t] - $CellContext`b $CellContext`d\
+\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+        Rational[-1, 
+           2] $CellContext`wr $CellContext`d\[Psi][$CellContext`t])] \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+        $CellContext`\[Delta]r[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`a $CellContext`g $CellContext`m + \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`a ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wr^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))))) + \
+$CellContext`a ($CellContext`Fxflinput[$CellContext`t] Sin[
+        $CellContext`\[Delta]f[$CellContext`t]] + \
+$CellContext`Fxfrinput[$CellContext`t] Sin[
+        $CellContext`\[Delta]f[$CellContext`t]] + 
+     Rational[-1, 2] $CellContext`Cyfr $CellContext`\[Mu]fr Cos[
+        $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wf^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+       ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a \
+$CellContext`d\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t]) + 
+     Rational[-1, 2] $CellContext`Cyfl $CellContext`\[Mu]fl Cos[
+        $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fznom[$CellContext`t]^(-1) (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wf^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+       ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a \
+$CellContext`d\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t])) + Rational[1, 2] $CellContext`wf (Cos[
+        $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fxflinput[$CellContext`t] - Cos[
+       $CellContext`\[Delta]f[$CellContext`t]] \
+$CellContext`Fxfrinput[$CellContext`t] + 
+     Rational[-1, 
+        2] $CellContext`Cyfr $CellContext`\[Mu]fr \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+        $CellContext`\[Delta]f[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wf^(-1) (-$CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) + $CellContext`Mxinput[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+       ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a \
+$CellContext`d\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+         Rational[-1, 
+            2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t]) + 
+     Rational[1, 
+        2] $CellContext`Cyfl $CellContext`\[Mu]fl \
+$CellContext`Fznom[$CellContext`t]^(-1) Sin[
+        $CellContext`\[Delta]f[$CellContext`t]] (($CellContext`a + \
+$CellContext`b)^(-1) ($CellContext`b $CellContext`g $CellContext`m - \
+$CellContext`h $CellContext`m ($CellContext`ddx[$CellContext`t] - \
+$CellContext`dy[$CellContext`t] $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`Myinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Cpm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) + \
+$CellContext`h ($CellContext`Fxinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cd $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)) + \
+$CellContext`b ($CellContext`Fzinput[$CellContext`t] + 
+           Rational[-1, 
+              2] $CellContext`Af $CellContext`Cl $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+             2 ($CellContext`dx[$CellContext`t] - Cos[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                  $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2))) + 
+       2 $CellContext`wf^(-1) ($CellContext`h $CellContext`m \
+($CellContext`ddy[$CellContext`t] + $CellContext`dx[$CellContext`t] \
+$CellContext`d\[Psi][$CellContext`t]) - $CellContext`Mxinput[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`Af ($CellContext`a + $CellContext`b) \
+$CellContext`Crm $CellContext`Pabs $CellContext`R^(-1) $CellContext`T^(-1) (
+           2 ($CellContext`dx[$CellContext`t] - Cos[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2) - \
+$CellContext`h ($CellContext`Fyinput[$CellContext`t] + 
+          Rational[-1, 
+             2] $CellContext`Af $CellContext`Cs $CellContext`Pabs \
+$CellContext`R^(-1) $CellContext`T^(-1) (
+            2 ($CellContext`dx[$CellContext`t] - Cos[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wx[$CellContext`t] - Sin[
+                 $CellContext`\[Psi][$CellContext`t]] \
+$CellContext`Wy[$CellContext`t])^2 + $CellContext`Wz[$CellContext`t]^2)))) (
+       ArcTan[($CellContext`dy[$CellContext`t] + $CellContext`a \
+$CellContext`d\[Psi][$CellContext`t])/($CellContext`dx[$CellContext`t] + 
+         Rational[
+           1, 2] $CellContext`wf $CellContext`d\[Psi][$CellContext`t])] - \
+$CellContext`\[Delta]f[$CellContext`t]))),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.871875558484357*^9, 3.871875742426401*^9, 
+  3.8718760449729443`*^9, 3.8718786974776955`*^9, 3.871973753472999*^9, 
+  3.871974207445057*^9, 3.8719808964652205`*^9, 3.8737049664920444`*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"7dfea86e-912c-498b-8795-941a1fda9c2c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "solve", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"sol", "=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ddx", "[", "t", "]"}], "==", 
+        RowBox[{"ddxRHS", "[", "t", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"ddy", "[", "t", "]"}], "==", 
+        RowBox[{"ddyRHS", "[", "t", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"dd\[Psi]", "[", "t", "]"}], "==", 
+        RowBox[{"dd\[Psi]RHS", "[", "t", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ddx", "[", "t", "]"}], ",", 
+       RowBox[{"ddy", "[", "t", "]"}], ",", 
+       RowBox[{"dd\[Psi]", "[", "t", "]"}]}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.871871818764556*^9, 3.871871932404879*^9}, {
+   3.8718720621119833`*^9, 3.871872100391823*^9}, {3.871872909955551*^9, 
+   3.8718729166833844`*^9}, {3.8718730307001233`*^9, 
+   3.8718730314458346`*^9}, {3.8718732854935184`*^9, 
+   3.8718732909109335`*^9}, {3.871873618124375*^9, 3.8718736235680895`*^9}, {
+   3.8718750650374002`*^9, 3.8718750662771945`*^9}, {3.871875342933893*^9, 
+   3.8718753437823176`*^9}, 3.871875999385619*^9},
+ CellLabel->"In[53]:=",ExpressionUUID->"12eb0dcb-10ef-481f-94c4-aa1bf38070bb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ddx", "[", "t", "]"}], "\[Rule]", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   FractionBox[
+                    RowBox[{"Cyrr", " ", "h", " ", "\[Mu]rr", " ", 
+                    RowBox[{"ArcTan", "[", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"dy", "[", "t", "]"}], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], "b", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], "d\[Psi]", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}], "]"}], 
+                    RowBox[{
+                    RowBox[{"dx", "[", "t", "]"}], "-", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", "wr", " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]}]], "]"}], " ", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], 
+                    RowBox[{"wr", " ", 
+                    RowBox[{"Fznom", "[", "t", "]"}]}]], "-", 
+                   FractionBox[
+                    RowBox[{"Cyrl", " ", 
+                    TemplateBox[{"3"},
+                    "OutputSizeLimit`Skeleton"], " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}], 
+                    RowBox[{"wr", " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]], "+", 
+                   TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], "-", 
+                   FractionBox[
+                    RowBox[{"Cyfl", " ", 
+                    TemplateBox[{"3"},
+                    "OutputSizeLimit`Skeleton"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"ArcTan", "[", 
+                    FractionBox[
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]], "]"}], "-", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}], ")"}]}], 
+                    RowBox[{"wf", " ", 
+                    RowBox[{"Fznom", "[", "t", "]"}]}]]}], ")"}], " ", 
+                 RowBox[{"(", 
+                  TemplateBox[{"1"},
+                   "OutputSizeLimit`Skeleton"], ")"}]}], "-", 
+                TemplateBox[{"1"},
+                 "OutputSizeLimit`Skeleton"]}], 
+               RowBox[{
+                RowBox[{"-", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"1", "+", 
+                    FractionBox[
+                    RowBox[{"Cyrr", " ", "h", " ", "\[Mu]rr", " ", 
+                    RowBox[{"ArcTan", "[", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], "]"}], " ", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Delta]r", "[", "t", "]"}], "]"}]}], 
+                    RowBox[{"wr", " ", 
+                    RowBox[{"Fznom", "[", "t", "]"}]}]], "-", 
+                    FractionBox[
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    RowBox[{"wr", " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]], "-", 
+                    FractionBox[
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    RowBox[{"wf", " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]], "+", 
+                    FractionBox[
+                    RowBox[{"Cyfl", " ", "h", " ", 
+                    TemplateBox[{"3"},
+                    "OutputSizeLimit`Skeleton"], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    RowBox[{"Cos", "[", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], "]"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"ArcTan", "[", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"dy", "[", "t", "]"}], "+", 
+                    RowBox[{"a", " ", 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]}], 
+                    RowBox[{
+                    RowBox[{"dx", "[", "t", "]"}], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    FractionBox["1", "2"], " ", 
+                    TemplateBox[{"2"},
+                    "OutputSizeLimit`Skeleton"], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"], 
+                    TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}]], "]"}], "-", 
+                    RowBox[{"\[Delta]f", "[", "t", "]"}]}], ")"}]}], 
+                    RowBox[{"wf", " ", 
+                    RowBox[{"Fznom", "[", "t", "]"}]}]]}], ")"}], " ", 
+                   TemplateBox[{"1"},
+                    "OutputSizeLimit`Skeleton"]}], ")"}]}], "+", 
+                TemplateBox[{"1"},
+                 "OutputSizeLimit`Skeleton"]}]]}]}], ",", 
+            TemplateBox[{"1"},
+             "OutputSizeLimit`Skeleton"], ",", 
+            RowBox[{
+             RowBox[{"dd\[Psi]", "[", "t", "]"}], "\[Rule]", 
+             TemplateBox[{"1"},
+              "OutputSizeLimit`Skeleton"]}]}], "}"}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          PaneBox[
+           TagBox[
+            TooltipBox[
+             StyleBox[
+              StyleBox[
+               DynamicBox[ToBoxes[
+                 FEPrivate`FrontEndResource[
+                 "FEStrings", "sizeBriefExplanation"], StandardForm],
+                ImageSizeCache->{32.4, {1., 7.}}],
+               StripOnInput->False,
+               DynamicUpdating->True,
+               LineSpacing->{1, 2},
+               LineIndent->0,
+               LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLText",
+              StripOnInput->False],
+             StyleBox[
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+                StandardForm]], DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[
+              Dynamic[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+              DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}], "Tooltip"]& ],
+           Alignment->Center,
+           BaselinePosition->Baseline,
+           ImageSize->{Automatic, {25, Full}}], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{32.4, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 53, 26315837493552140569, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{32.4, {2., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 53, 26315837493552140569, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{32.4, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 53, 26315837493552140569, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{55.541162109375, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Advanced"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    BaseStyle->"OutputSizeLimit",
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  If[26315837493552140569 === $SessionID, 
+   Out[53], Message[
+     MessageName[Syntax, "noinfoker"]]; Missing["NotAvailable"]; 
+   Null]]], "Output",
+ CellChangeTimes->{{3.871873291922769*^9, 3.871873337257351*^9}, {
+   3.8718733723926373`*^9, 3.8718733861766343`*^9}, 3.871873629462008*^9, 
+   3.8718741018080835`*^9, {3.871874848744376*^9, 3.871874862846086*^9}, 
+   3.871875070989262*^9, 3.871875660336214*^9, 3.871876051622323*^9, 
+   3.871973760959229*^9, 3.8719742142200527`*^9, 3.871980902917231*^9, 
+   3.873704972504385*^9},
+ CellLabel->"Out[53]=",ExpressionUUID->"0cfc85cc-0a21-4947-80a9-778db2270997"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$ddx", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$ddy", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$dd\[Psi]", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "3", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.8718759507015333`*^9, 3.8718760393920946`*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"3224c683-5123-4eaf-a240-fbcdad8be922"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Simplified Equation", "Subsection",
+ CellChangeTimes->{{3.8718789301700974`*^9, 3.8718789340636635`*^9}, {
+  3.871878965229556*^9, 
+  3.8718789675488205`*^9}},ExpressionUUID->"729e5919-14b7-4cb9-a300-\
+aba2dbdfd4de"],
+
+Cell[CellGroupData[{
+
+Cell["Preparation", "Subsubsection",
+ CellChangeTimes->{{3.871872664220069*^9, 3.8718727031371202`*^9}, 
+   3.8718789595315237`*^9, {3.8718815848965483`*^9, 
+   3.871881595338581*^9}},ExpressionUUID->"2496ae8e-189c-4258-8594-\
+a5e7c4f61c9d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"solfunc", "[", "t_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "sol", "}"}], ",", 
+      RowBox[{
+       RowBox[{"sol", "=", 
+        RowBox[{"Solve", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ddx", "[", "t", "]"}], "==", 
+             RowBox[{"ddxRHS", "[", "t", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"ddy", "[", "t", "]"}], "==", 
+             RowBox[{"ddyRHS", "[", "t", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"dd\[Psi]", "[", "t", "]"}], "==", 
+             RowBox[{"dd\[Psi]RHS", "[", "t", "]"}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"ddx", "[", "t", "]"}], ",", 
+            RowBox[{"ddy", "[", "t", "]"}], ",", 
+            RowBox[{"dd\[Psi]", "[", "t", "]"}]}], "}"}]}], "]"}]}], ";", 
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"sol", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}]}], "]"}], 
+    ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.871881602961259*^9, 3.87188160842222*^9}, {
+  3.871882011933426*^9, 3.8718820135253625`*^9}, {3.871882116559883*^9, 
+  3.8718821894538164`*^9}, {3.8718822195586243`*^9, 3.87188232652703*^9}, {
+  3.8718823686875534`*^9, 3.871882372516569*^9}, {3.8718824830262575`*^9, 
+  3.8718825299445877`*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"7827536c-8a10-4031-9d63-bd7d48b7bfb6"]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "Subsection",ExpressionUUID->"8453e6c6-3688-4405-9bc5-2c1f5d61664a"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["eigenvalue", "Section",
+ CellChangeTimes->{{3.872029137201187*^9, 
+  3.872029147047583*^9}},ExpressionUUID->"51a4e72e-a11a-49aa-afd1-\
+8e04e2d94fe0"],
+
+Cell[CellGroupData[{
+
+Cell["Longitudinal-lateral", "Subsection",
+ CellChangeTimes->{{3.8719817867884517`*^9, 
+  3.8719817994929695`*^9}},ExpressionUUID->"39aa910f-27a6-4b11-aed5-\
+1913194487f5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Cf", "=", 
+   RowBox[{
+    RowBox[{"-", "12"}], "\[Times]", 
+    SuperscriptBox["10", "3"]}]}], ";", " ", 
+  RowBox[{"lf", "=", "1.4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Cr", "=", 
+   RowBox[{
+    RowBox[{"-", "11"}], "\[Times]", 
+    SuperscriptBox["10", "3"]}]}], ";", " ", 
+  RowBox[{"lr", "=", "1.6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", "=", "2000"}], ";", " ", 
+  RowBox[{"Iz", "=", "4000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Kappa]D", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Eigenvalues", "[", 
+  RowBox[{"(", GridBox[{
+     {
+      RowBox[{"2", 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{"Cf", "+", "Cr"}], ")"}], 
+        RowBox[{"m", " ", "vx"}]]}], 
+      RowBox[{
+       RowBox[{"2", 
+        FractionBox[
+         RowBox[{"(", 
+          RowBox[{"Cf", "+", "Cr"}], ")"}], 
+         RowBox[{"m", " ", "vx"}]]}], "-", "vx"}], "0"},
+     {
+      RowBox[{"2", 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cf", " ", "lf"}], "+", 
+          RowBox[{"Cr", " ", "lr"}]}], ")"}], 
+        RowBox[{"Iz", " ", "vx"}]]}], 
+      RowBox[{"2", 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cf", " ", 
+           SuperscriptBox["lf", "2"]}], "+", 
+          RowBox[{"Cr", " ", 
+           SuperscriptBox["lr", "2"]}]}], ")"}], 
+        RowBox[{"Iz", " ", "vx"}]]}], "0"},
+     {"0", "0", 
+      FractionBox["\[Kappa]D", "m"]}
+    }], ")"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8719784086688375`*^9, 3.871978450149537*^9}, {
+  3.8719788383918533`*^9, 3.87197884906112*^9}, {3.8719788832704144`*^9, 
+  3.871978886585985*^9}, {3.8719789753557262`*^9, 3.871979058192127*^9}, {
+  3.871979152549652*^9, 3.871979258872652*^9}, {3.8719793402816725`*^9, 
+  3.871979375242983*^9}, {3.871981827613164*^9, 3.871981829810856*^9}, {
+  3.871982643493102*^9, 3.8719826672519894`*^9}},
+ CellLabel->"In[98]:=",ExpressionUUID->"2926d7b7-2e97-4e54-9949-dec48d5b815e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.0005`", ",", 
+   FractionBox[
+    RowBox[{"0.5`", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "48.84`"}], "-", 
+       SqrtBox[
+        RowBox[{"1590.4656000000002`", "\[VeryThinSpace]", "+", 
+         RowBox[{"68.8`", " ", 
+          SuperscriptBox["vx", "2"]}]}]]}], ")"}]}], "vx"], ",", 
+   FractionBox[
+    RowBox[{"0.5`", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "48.84`"}], "+", 
+       SqrtBox[
+        RowBox[{"1590.4656000000002`", "\[VeryThinSpace]", "+", 
+         RowBox[{"68.8`", " ", 
+          SuperscriptBox["vx", "2"]}]}]]}], ")"}]}], "vx"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.871979259543584*^9, {3.871979341369612*^9, 3.871979379664606*^9}, 
+   3.8719794246164293`*^9, 3.87198090302813*^9, 3.8719819785906677`*^9, {
+   3.871982647830827*^9, 3.8719826678257475`*^9}, 3.873704972635344*^9, 
+   3.873705177418332*^9},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"7a523174-76b7-4896-b0d5-9d64b3f406f6"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Lateral only", "Subsection",
+ CellChangeTimes->{{3.8719818047518387`*^9, 
+  3.871981809413554*^9}},ExpressionUUID->"88a31f2c-067f-44ca-a6a7-\
+31eab7521b48"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Cf", "=", "1857.6"}], ";", " ", 
+  RowBox[{"lf", "=", "1.015"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Cr", "=", "1136.3"}], ";", " ", 
+  RowBox[{"lr", "=", "1.895"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", "=", "1270"}], ";", " ", 
+  RowBox[{"Iz", "=", "1536.7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Eigenvalues", "[", 
+   RowBox[{"(", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"-", "2"}], 
+        FractionBox[
+         RowBox[{"(", 
+          RowBox[{"Cf", "+", "Cr"}], ")"}], 
+         RowBox[{"m", " ", "vx"}]]}], 
+       RowBox[{
+        RowBox[{"2", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"lr", " ", "Cr"}], "-", 
+           RowBox[{"lf", " ", "Cf"}]}], 
+          RowBox[{"m", " ", "vx"}]]}], "-", "vx"}]},
+      {
+       RowBox[{"2", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"lr", " ", "Cr"}], "-", 
+          RowBox[{"lf", " ", "Cf"}]}], 
+         RowBox[{"Iz", " ", "vx"}]]}], 
+       RowBox[{
+        RowBox[{"-", "2"}], 
+        FractionBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Cf", " ", 
+            SuperscriptBox["lf", "2"]}], "+", 
+           RowBox[{"Cr", " ", 
+            SuperscriptBox["lr", "2"]}]}], ")"}], 
+         RowBox[{"Iz", " ", "vx"}]]}]}
+     }], ")"}], "]"}], "/.", 
+  RowBox[{"vx", "->", "5"}]}]}], "Input",
+ CellChangeTimes->{{3.8719818188689313`*^9, 3.8719819588058915`*^9}, {
+  3.873713430878102*^9, 3.8737134878463097`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"0345fe32-b2dc-4935-97d1-888cabb0601e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "1.2516231753107308`"}], "-", 
+    RowBox[{"0.49741101087071293`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.2516231753107308`"}], "+", 
+    RowBox[{"0.49741101087071293`", " ", "\[ImaginaryI]"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.8719819647126665`*^9, 3.8737049726493635`*^9, 3.873705188206319*^9, {
+   3.8737134692603045`*^9, 3.873713488385681*^9}, 3.873769078526722*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"80e1cdc0-c97a-46b7-8669-a754331dd03f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["linear model", "Section",
+ CellChangeTimes->{{3.87197941355867*^9, 3.8719794212765865`*^9}, {
+  3.8719817796034946`*^9, 3.871981784501273*^9}, {3.872029148973422*^9, 
+  3.872029153490403*^9}},ExpressionUUID->"f52a6d79-44c9-48f7-9d51-\
+a1410630f45e"],
+
+Cell[TextData[StyleBox["clear", "Subsubsection"]], "Text",
+ CellChangeTimes->{{3.8720215128290887`*^9, 3.8720215157360306`*^9}, {
+  3.872023069295538*^9, 3.872023071260465*^9}, {3.872029181668951*^9, 
+  3.872029192385071*^9}},ExpressionUUID->"e5018469-e7cd-4026-9e62-\
+2b617a2f9491"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$Assumptions", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]}], "Input",
+ CellLabel->"In[67]:=",ExpressionUUID->"d383d738-3f68-4207-9bcb-4a59d827c37f"],
+
+Cell[CellGroupData[{
+
+Cell["external forces", "Subsubsection",
+ CellChangeTimes->{{3.872021612635906*^9, 
+  3.872021614652684*^9}},ExpressionUUID->"8d34825b-60a9-438d-8874-\
+2d3a2b1a1d87"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fxext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdx", "[", "t", "]"}], "+", 
+    RowBox[{"Fxinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fyext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdy", "[", "t", "]"}], "+", 
+    RowBox[{"Fyinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Fdz", "[", "t", "]"}], "+", 
+    RowBox[{"Fzinput", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Mxext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdx", "[", "t", "]"}], "+", 
+    RowBox[{"Mxinput", "[", "t", "]"}]}]}], ";", 
+  RowBox[{
+   RowBox[{"Myext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdy", "[", "t", "]"}], "+", 
+    RowBox[{"Myinput", "[", "t", "]"}]}]}], ";", 
+  RowBox[{
+   RowBox[{"Mzext", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Mdz", "[", "t", "]"}], "+", 
+    RowBox[{"Mzinput", "[", "t", "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8720220219646797`*^9, 3.872022028212333*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"234b0694-1bc7-419b-aaff-6510bd5cf874"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"drag", " ", "force", " ", "by", " ", "aerodynamics"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"DragType", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Switch", "[", 
+     RowBox[{"DragType", ",", "\[IndentingNewLine]", "1", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Fdx", "[", "t_", "]"}], ":=", "0"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Fdy", "[", "t_", "]"}], ":=", "0"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Fdz", "[", "t_", "]"}], ":=", "0"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdx", "[", "t_", "]"}], ":=", "0"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdy", "[", "t_", "]"}], ":=", "0"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdz", "[", "t_", "]"}], ":=", "0"}], ";"}], "}"}], ",", 
+      "\[IndentingNewLine]", "2", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"wx", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Wx", "[", "t", "]"}], " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}], "+", 
+          RowBox[{
+           RowBox[{"Wy", "[", "t", "]"}], " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}]}]}], ";", 
+        RowBox[{
+         RowBox[{"wy", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Wy", "[", "t", "]"}], " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"Wx", "[", "t", "]"}], " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"\[Psi]", "[", "t", "]"}], "]"}]}]}]}], ";", 
+        RowBox[{
+         RowBox[{"wz", "[", "t_", "]"}], ":=", 
+         RowBox[{"Wz", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"wmean", "[", "t_", "]"}], ":=", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"dx", "[", "t", "]"}], "-", 
+               RowBox[{"wx", "[", "t", "]"}]}], ")"}], "2"], "+", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"dx", "[", "t", "]"}], "-", 
+               RowBox[{"wx", "[", "t", "]"}]}], ")"}], "2"], "+", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"wz", "[", "t", "]"}], ")"}], "2"]}], ")"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Fdx", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Cd", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Fdy", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Cs", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Fdz", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Cl", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdx", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Crm", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"a", "+", "b"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdy", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Cpm", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"a", "+", "b"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Mdz", "[", "t_", "]"}], ":=", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", "T", " ", "R"}]]}], "Cym", " ", "Af", " ", 
+          "Pabs", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"wmean", "[", "t", "]"}], ")"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"a", "+", "b"}], ")"}]}]}], ";"}], "}"}]}], "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.872022125148576*^9, 3.872022194326537*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"3d895a01-798d-45ea-aab6-c85889672f41"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+1 for \[OpenCurlyDoubleQuote]external longitudinal velocity\
+\[CloseCurlyDoubleQuote], 2 for \[OpenCurlyDoubleQuote]external longitudinal \
+forces\[CloseCurlyDoubleQuote]\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.8718665763595657`*^9, 3.871866584198907*^9}, 
+   3.8718788558417397`*^9},ExpressionUUID->"640b8453-69a3-433b-bbd8-\
+eb95b1168645"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"AxleType", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Switch", "[", 
+   RowBox[{"AxleType", ",", "\[IndentingNewLine]", "1", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxft", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrt", "[", "t_", "]"}], ":=", "0"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyft", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfl"}], " ", 
+        RowBox[{"\[Alpha]f", "[", "t", "]"}]}]}], " ", 
+      RowBox[{"(*", 
+       RowBox[{"\[Mu]fl", " ", 
+        FractionBox[
+         RowBox[{"Fzf", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}], "*)"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrl"}], " ", 
+        RowBox[{"\[Alpha]r", "[", "t", "]"}]}]}], 
+      RowBox[{"(*", " ", 
+       RowBox[{"\[Mu]rl", " ", 
+        FractionBox[
+         RowBox[{"Fzr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}], "*)"}], ";"}], "}"}], ",", 
+    "\[IndentingNewLine]", "2", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxft", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxfinput", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fxrt", "[", "t_", "]"}], ":=", 
+       RowBox[{"Fxrinput", "[", "t", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyft", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyfl"}], " ", 
+        RowBox[{"\[Alpha]f", "[", "t", "]"}]}]}], " ", 
+      RowBox[{"(*", 
+       RowBox[{"\[Mu]fl", " ", 
+        FractionBox[
+         RowBox[{"Fzf", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}], "*)"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Fyrt", "[", "t_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"-", "Cyrl"}], " ", 
+        RowBox[{"\[Alpha]r", "[", "t", "]"}]}]}], " ", 
+      RowBox[{"(*", 
+       RowBox[{"\[Mu]rl", " ", 
+        FractionBox[
+         RowBox[{"Fzr", "[", "t", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"Fznom", "[", "t", "]"}]}]]}], "*)"}], ";"}], "}"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8718047073121843`*^9, 3.871804711234461*^9}, {
+   3.871804755179414*^9, 3.8718047811522217`*^9}, 3.8718050597748404`*^9, {
+   3.871805911770745*^9, 3.8718059500280495`*^9}, {3.871806104820155*^9, 
+   3.8718061320018215`*^9}, {3.8718061968322463`*^9, 3.871806335251216*^9}, {
+   3.871862166700513*^9, 3.871862173797427*^9}, {3.8718622131760693`*^9, 
+   3.871862334042043*^9}, {3.8718623860688267`*^9, 3.8718624592271547`*^9}, {
+   3.8718625172806196`*^9, 3.8718625707683644`*^9}, {3.8718647561644077`*^9, 
+   3.8718648380162125`*^9}, {3.8718653668714924`*^9, 
+   3.8718653854605165`*^9}, {3.871865481454174*^9, 3.8718655924250975`*^9}, {
+   3.87186562265906*^9, 3.871865754437318*^9}, {3.871865808071745*^9, 
+   3.871865814191986*^9}, {3.871865877551834*^9, 3.8718658808880835`*^9}, {
+   3.871866125404023*^9, 3.8718661263439145`*^9}, {3.871866311934678*^9, 
+   3.871866328878888*^9}, {3.871866850650244*^9, 3.8718668600141087`*^9}, {
+   3.8718702205031347`*^9, 3.871870231721719*^9}, {3.8718788489484224`*^9, 
+   3.8718788508231773`*^9}, {3.8718792686496654`*^9, 
+   3.8718792744530888`*^9}, {3.872021660202128*^9, 3.8720217222075987`*^9}, {
+   3.8720218661475945`*^9, 3.8720218688501315`*^9}, {3.872022481884234*^9, 
+   3.872022499670044*^9}, {3.872051301381423*^9, 3.8720513037670918`*^9}, {
+   3.8722979203009005`*^9, 3.8722979233616*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"52752017-fe6e-475c-b86c-931a83856b29"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+weight and load transfer by varying the effective friction parameters\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.8718640143892107`*^9, 
+  3.871864051367632*^9}},ExpressionUUID->"4d30ea5b-c0c5-4c59-89ee-\
+16e97b560ada"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzf", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"a", "+", "b"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"b", " ", "m", " ", "g"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"ddx", "[", "t", "]"}], "-", 
+         RowBox[{
+          RowBox[{"dy", "[", "t", "]"}], " ", 
+          RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}], " ", "m", " ", "h"}],
+       "+", 
+      RowBox[{"h", " ", 
+       RowBox[{"Fxext", "[", "t", "]"}]}], "+", 
+      RowBox[{"b", " ", 
+       RowBox[{"Fzext", "[", "t", "]"}]}], "-", 
+      RowBox[{"Myext", "[", "t", "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fzr", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"a", "+", "b"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"a", " ", "m", " ", "g"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"ddx", "[", "t", "]"}], "-", 
+         RowBox[{
+          RowBox[{"dy", "[", "t", "]"}], " ", 
+          RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], ")"}], " ", "m", " ", "h"}],
+       "-", 
+      RowBox[{"h", " ", 
+       RowBox[{"Fxext", "[", "t", "]"}]}], "+", 
+      RowBox[{"a", " ", 
+       RowBox[{"Fzext", "[", "t", "]"}]}], "+", 
+      RowBox[{"Myext", "[", "t", "]"}]}], ")"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8718640649922276`*^9, 3.871864086060963*^9}, {
+  3.8718645435103016`*^9, 3.8718646736495037`*^9}, {3.8718647060013247`*^9, 
+  3.871864721728368*^9}, {3.8718663343093033`*^9, 3.8718663347736034`*^9}, {
+  3.871871491893877*^9, 3.871871497127239*^9}, {3.8718732670185833`*^9, 
+  3.8718732670209274`*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"6b408e77-4e3d-413c-b749-d4d9d340516f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["slip angles", "Subsubsection",
+ CellChangeTimes->{{3.871866178856978*^9, 
+  3.871866184179761*^9}},ExpressionUUID->"cf8fcc58-5ffc-4567-ad9d-\
+bfa9e7d9e1e2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]f", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"dy", "[", "t", "]"}], "+", 
+      RowBox[{"a", " ", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+     RowBox[{"dx", "[", "t", "]"}]], "-", 
+    RowBox[{"\[Delta]f", "[", "t", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Alpha]r", "[", "t_", "]"}], ":=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"dy", "[", "t", "]"}], "-", 
+     RowBox[{"b", " ", 
+      RowBox[{"d\[Psi]", "[", "t", "]"}]}]}], 
+    RowBox[{"dx", "[", "t", "]"}]]}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Delta]r", "[", "t_", "]"}], ":=", "0"}], ";"}], "*)"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.871866188011632*^9, 3.871866225296959*^9}, {
+  3.871866288380224*^9, 3.871866299506493*^9}, {3.8718663399000044`*^9, 
+  3.8718664236078367`*^9}, {3.8718700639829865`*^9, 3.8718700857251377`*^9}, {
+  3.871870259759618*^9, 3.8718702640716577`*^9}, {3.8718707311041546`*^9, 
+  3.8718707521342*^9}, {3.871871561410223*^9, 3.8718715695023537`*^9}, {
+  3.871873267035915*^9, 3.8718732670648108`*^9}, {3.8718787229340057`*^9, 
+  3.871878725568394*^9}, {3.871974175224202*^9, 3.8719742033885903`*^9}, {
+  3.8720218544697623`*^9, 3.8720219196350455`*^9}, {3.872022532203895*^9, 
+  3.872022548959917*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"438a53a9-ff93-4917-b797-5a440b24b2b4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["steering angles of the tire(wheel)", "Subsubsection",
+ CellChangeTimes->{{3.8718664677710867`*^9, 
+  3.8718664998271437`*^9}},ExpressionUUID->"0046003f-3c11-4c3a-908e-\
+5e954d71e67e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxf", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxft", "[", "t", "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"Fyft", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Fyf", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Fxft", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}], "+", 
+      RowBox[{
+       RowBox[{"Fyft", "[", "t", "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Delta]f", "[", "t", "]"}], "]"}]}]}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxf", "[", "t_", "]"}], ":=", 
+     RowBox[{"Fxft", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fyf", "[", "t_", "]"}], ":=", 
+     RowBox[{"Fyft", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fxr", "[", "t_", "]"}], ":=", 
+     RowBox[{"Fxrt", "[", "t", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fyr", "[", "t_", "]"}], ":=", 
+     RowBox[{"Fyrt", "[", "t", "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.8718665047240944`*^9, 3.871866523950156*^9}, {
+   3.87186661416522*^9, 3.871866650968356*^9}, {3.8718667241250973`*^9, 
+   3.8718668151142697`*^9}, {3.871870845654951*^9, 3.871870928635846*^9}, {
+   3.8718710547263627`*^9, 3.8718711279471145`*^9}, 3.8718716237092657`*^9, {
+   3.8718751205858393`*^9, 3.871875144673234*^9}, {3.872021947014223*^9, 
+   3.8720219656072917`*^9}, 3.872022212522299*^9, {3.872022557975911*^9, 
+   3.8720226245467033`*^9}, 3.8720511853103647`*^9},
+ CellLabel->"In[81]:=",ExpressionUUID->"948f5aa9-53df-4342-bc94-7499f86e1741"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DYNAMICS", "Subsubsection",
+ CellChangeTimes->{{3.871868596042416*^9, 
+  3.8718686146683025`*^9}},ExpressionUUID->"d7590480-7c09-43d5-b11c-\
+7183a13e580a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "ddx", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ddxRHS", "[", "t_", "]"}], ":=", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dy", "[", "t", "]"}], " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}], "+"}], "*)"}], 
+     RowBox[{
+      FractionBox["1", "m"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Fxf", "[", "t", "]"}], "+", 
+        RowBox[{"Fxr", "[", "t", "]"}], "+", 
+        RowBox[{"Fxext", "[", "t", "]"}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ddxRHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.8718686160311394`*^9, 3.871868632852746*^9}, {
+   3.8718703681694136`*^9, 3.871870371852468*^9}, {3.871870403737612*^9, 
+   3.871870445588745*^9}, {3.871871241500949*^9, 3.871871293321433*^9}, {
+   3.8718713290963106`*^9, 3.8718713353161097`*^9}, {3.871871389040481*^9, 
+   3.871871403038582*^9}, {3.8718717756115274`*^9, 3.871871800080931*^9}, 
+   3.871873267070794*^9, 3.871873365907498*^9, {3.8718755998090487`*^9, 
+   3.871875603386011*^9}, 3.8718757353926854`*^9, {3.872022238271611*^9, 
+   3.8720222384773483`*^9}, {3.87202227530258*^9, 3.872022275567562*^9}, {
+   3.8720223097724113`*^9, 3.8720223232919364`*^9}, 3.8720229302838593`*^9},
+ CellLabel->"In[85]:=",ExpressionUUID->"3b372e90-b775-46c1-be6e-19fa33d2890b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Times", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["336", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  $CellContext`m^(-1) ($CellContext`Fxfinput[$CellContext`t] + \
+$CellContext`Fxinput[$CellContext`t] + $CellContext`Fxrinput[$CellContext`t]),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.8718756478612146`*^9, 3.871875739032467*^9, 3.871876044788768*^9, 
+   3.871973753297475*^9, 3.871974207259381*^9, 3.8719808962649417`*^9, 
+   3.872022377428175*^9, 3.8720224279825125`*^9, 3.8720225068131027`*^9, 
+   3.872022637320957*^9, 3.8720229331956873`*^9, {3.872023023557729*^9, 
+   3.872023040416027*^9}, 3.8720513123431253`*^9, 3.8722979363098574`*^9, 
+   3.8737049727124205`*^9},
+ CellLabel->"Out[86]=",ExpressionUUID->"6fdb3966-2866-4dc5-993d-55fc474cbe84"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "ddy", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ddyRHS", "[", "t_", "]"}], ":=", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"dx", "[", "t", "]"}]}], " ", 
+        RowBox[{"d\[Psi]", "[", "t", "]"}]}], "+"}], "*)"}], 
+     RowBox[{
+      FractionBox["1", "m"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Fyf", "[", "t", "]"}], "+", 
+        RowBox[{"Fyr", "[", "t", "]"}], "+", 
+        RowBox[{"Fyext", "[", "t", "]"}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ddyRHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.8718712807671185`*^9, 3.871871359805767*^9}, {
+   3.8718714082287703`*^9, 3.871871411157076*^9}, {3.8718718040455723`*^9, 
+   3.871871805257354*^9}, 3.871873267082763*^9, {3.8718755639250355`*^9, 
+   3.8718755671150846`*^9}, 3.871875737441864*^9, {3.8720222361027484`*^9, 
+   3.8720222363485126`*^9}, {3.8720222896632295`*^9, 
+   3.8720222928701973`*^9}, {3.8720223287896357`*^9, 3.872022337753089*^9}, 
+   3.8720229206859035`*^9, 3.8720230106325436`*^9, {3.8737052148868527`*^9, 
+   3.873705219271001*^9}},ExpressionUUID->"6ee99a73-957a-437d-88b5-\
+5801f9bbf196"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Times", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["1320", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  $CellContext`m^(-1) (-$CellContext`Cyrl \
+$CellContext`dx[$CellContext`t]^(-1) ($CellContext`dy[$CellContext`t] - \
+$CellContext`b $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Fyinput[$CellContext`t] - $CellContext`Cyfl \
+($CellContext`dx[$CellContext`t]^(-1) ($CellContext`dy[$CellContext`t] + \
+$CellContext`a $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`\[Delta]f[$CellContext`t])),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.871875606294648*^9, 3.8718757407724886`*^9, 3.8718760448864765`*^9, 
+   3.8719737533812447`*^9, 3.8719742073483157`*^9, 3.8719808963605213`*^9, 
+   3.8720223775107374`*^9, 3.8720224280548935`*^9, 3.8720225068873096`*^9, 
+   3.872022637401992*^9, 3.8720229332859774`*^9, {3.8720230236412077`*^9, 
+   3.8720230404925957`*^9}, 3.872051312423069*^9, 3.87229793639161*^9, 
+   3.873704972730442*^9},
+ CellLabel->"Out[88]=",ExpressionUUID->"9f3dc25e-c353-42ef-b13b-677e5994132c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"RHS", " ", "of", " ", "dr", " ", "equation"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"dd\[Psi]RHS", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      FractionBox["1", "Izz"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", " ", 
+         RowBox[{"Fyf", "[", "t", "]"}]}], "-", 
+        RowBox[{"b", " ", 
+         RowBox[{"Fyr", "[", "t", "]"}]}], "+", 
+        RowBox[{"Mzext", "[", "t", "]"}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dd\[Psi]RHS", "[", "t", "]"}], "//", "Iconize"}]}]}]], "Input",
+ CellChangeTimes->{{3.871871382967475*^9, 3.871871383711506*^9}, {
+   3.87187141724275*^9, 3.8718714778156624`*^9}, {3.8718716414327526`*^9, 
+   3.8718716773354607`*^9}, {3.8718717153232408`*^9, 
+   3.8718717210928755`*^9}, {3.8718718080253115`*^9, 3.871871810720909*^9}, {
+   3.8718753337594004`*^9, 3.8718753397260647`*^9}, {3.871875531214141*^9, 
+   3.8718755580778136`*^9}, 3.8718786962935677`*^9, {3.872022233539513*^9, 
+   3.872022233741829*^9}, {3.8720222949051213`*^9, 3.8720222995410986`*^9}, {
+   3.872022348133293*^9, 3.872022369714087*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"0ee471b6-dfdf-4008-b841-a86e248ac76a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"Times", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["1312", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  $CellContext`Izz^(-1) ($CellContext`b $CellContext`Cyrl \
+$CellContext`dx[$CellContext`t]^(-1) ($CellContext`dy[$CellContext`t] - \
+$CellContext`b $CellContext`d\[Psi][$CellContext`t]) + \
+$CellContext`Mzinput[$CellContext`t] - $CellContext`a $CellContext`Cyfl \
+($CellContext`dx[$CellContext`t]^(-1) ($CellContext`dy[$CellContext`t] + \
+$CellContext`a $CellContext`d\[Psi][$CellContext`t]) - \
+$CellContext`\[Delta]f[$CellContext`t])),
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.871875558484357*^9, 3.871875742426401*^9, 3.8718760449729443`*^9, 
+   3.8718786974776955`*^9, 3.871973753472999*^9, 3.871974207445057*^9, 
+   3.8719808964652205`*^9, 3.8720223775932894`*^9, 3.872022428122833*^9, 
+   3.8720225069598675`*^9, 3.872022637477004*^9, 3.8720229333650904`*^9, {
+   3.87202302372204*^9, 3.872023040569688*^9}, 3.872051312491995*^9, 
+   3.872297936475102*^9, 3.873704972750472*^9},
+ CellLabel->"Out[90]=",ExpressionUUID->"e41aec6b-de7c-4186-8283-6da4d05ed8d7"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "solve", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"sol", "=", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ddx", "[", "t", "]"}], "==", 
+         RowBox[{"ddxRHS", "[", "t", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"ddy", "[", "t", "]"}], "==", 
+         RowBox[{"ddyRHS", "[", "t", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"dd\[Psi]", "[", "t", "]"}], "==", 
+         RowBox[{"dd\[Psi]RHS", "[", "t", "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"ddx", "[", "t", "]"}], ",", 
+        RowBox[{"ddy", "[", "t", "]"}], ",", 
+        RowBox[{"dd\[Psi]", "[", "t", "]"}]}], "}"}]}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.871871818764556*^9, 3.871871932404879*^9}, {
+   3.8718720621119833`*^9, 3.871872100391823*^9}, {3.871872909955551*^9, 
+   3.8718729166833844`*^9}, {3.8718730307001233`*^9, 
+   3.8718730314458346`*^9}, {3.8718732854935184`*^9, 
+   3.8718732909109335`*^9}, {3.871873618124375*^9, 3.8718736235680895`*^9}, {
+   3.8718750650374002`*^9, 3.8718750662771945`*^9}, {3.871875342933893*^9, 
+   3.8718753437823176`*^9}, 3.871875999385619*^9, 3.8720231744529123`*^9},
+ CellLabel->"In[91]:=",ExpressionUUID->"6847b4c4-6066-4768-a507-f9673ca62cd5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$ddx", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$ddy", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol$dd\[Psi]", "[", "t_", "]"}], ":=", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "3", ",", "2"}], "]"}], "]"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellLabel->"In[92]:=",ExpressionUUID->"3e45ba92-71e5-4ce9-aab9-a8efafaa9811"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+    RowBox[{"ddx", "[", "t", "]"}], ",", "\"\<=\>\"", ",", 
+    RowBox[{
+     RowBox[{"sol$ddx", "[", "t", "]"}], "~", "Collect", "~", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"dx", "[", "t", "]"}], ",", 
+       RowBox[{"dy", "[", "t", "]"}], ",", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}]}], "}"}]}], ",", 
+    RowBox[{"\[Delta]f", "[", "t", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+    RowBox[{"ddy", "[", "t", "]"}], ",", "\"\<=\>\"", ",", 
+    RowBox[{
+     RowBox[{"sol$ddy", "[", "t", "]"}], "~", "Collect", "~", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], ",", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}], ",", 
+       RowBox[{"\[Delta]f", "[", "t", "]"}]}], "}"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+    RowBox[{"dd\[Psi]", "[", "t", "]"}], ",", "\"\<=\>\"", ",", 
+    RowBox[{
+     RowBox[{"sol$dd\[Psi]", "[", "t", "]"}], "~", "Collect", "~", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"dy", "[", "t", "]"}], ",", 
+       RowBox[{"d\[Psi]", "[", "t", "]"}], ",", 
+       RowBox[{"\[Delta]f", "[", "t", "]"}]}], "}"}]}]}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.872022671149503*^9, 3.8720228063282804`*^9}, {
+  3.8720230350032535`*^9, 3.8720230363609495`*^9}, {3.8720235624846725`*^9, 
+  3.8720235755173063`*^9}},
+ CellLabel->"In[95]:=",ExpressionUUID->"eda94be3-5913-483e-b9da-f15bcec5e179"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"ddx", "[", "t", "]"}], "\[InvisibleSpace]", "\<\"=\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Fxfinput", "[", "t", "]"}], "+", 
+     RowBox[{"Fxinput", "[", "t", "]"}], "+", 
+     RowBox[{"Fxrinput", "[", "t", "]"}]}], "m"], "\[InvisibleSpace]", 
+   RowBox[{"\[Delta]f", "[", "t", "]"}]}],
+  SequenceForm[
+   $CellContext`ddx[$CellContext`t], 
+   "=", $CellContext`m^(-1) ($CellContext`Fxfinput[$CellContext`t] + \
+$CellContext`Fxinput[$CellContext`t] + $CellContext`Fxrinput[$CellContext`t]), 
+   $CellContext`\[Delta]f[$CellContext`t]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.872022780098056*^9, 3.872022810504259*^9, 3.872022933512207*^9, {
+   3.8720230238716097`*^9, 3.8720230407068343`*^9}, 3.872023578199548*^9, 
+   3.8720513125837593`*^9, 3.8722979365900974`*^9, 3.873704972774001*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[95]:=",ExpressionUUID->"72a4203c-8fab-4f8f-967a-\
+9da5eb5d2df4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"ddy", "[", "t", "]"}], "\[InvisibleSpace]", "\<\"=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "Cyfl"}], "-", "Cyrl"}], ")"}], " ", 
+      RowBox[{"dy", "[", "t", "]"}]}], 
+     RowBox[{"m", " ", 
+      RowBox[{"dx", "[", "t", "]"}]}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "a"}], " ", "Cyfl"}], "+", 
+        RowBox[{"b", " ", "Cyrl"}]}], ")"}], " ", 
+      RowBox[{"d\[Psi]", "[", "t", "]"}]}], 
+     RowBox[{"m", " ", 
+      RowBox[{"dx", "[", "t", "]"}]}]], "+", 
+    FractionBox[
+     RowBox[{"Fyinput", "[", "t", "]"}], "m"], "+", 
+    FractionBox[
+     RowBox[{"Cyfl", " ", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}]}], "m"]}]}],
+  SequenceForm[
+   $CellContext`ddy[$CellContext`t], 
+   "=", (-$CellContext`Cyfl - $CellContext`Cyrl) $CellContext`m^(-1) \
+$CellContext`dx[$CellContext`t]^(-1) $CellContext`dy[$CellContext`t] + \
+(-$CellContext`a $CellContext`Cyfl + $CellContext`b $CellContext`Cyrl) \
+$CellContext`m^(-1) $CellContext`dx[$CellContext`t]^(-1) \
+$CellContext`d\[Psi][$CellContext`t] + $CellContext`m^(-1) \
+$CellContext`Fyinput[$CellContext`t] + $CellContext`Cyfl $CellContext`m^(-1) \
+$CellContext`\[Delta]f[$CellContext`t]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.872022780098056*^9, 3.872022810504259*^9, 3.872022933512207*^9, {
+   3.8720230238716097`*^9, 3.8720230407068343`*^9}, 3.872023578199548*^9, 
+   3.8720513125837593`*^9, 3.8722979365900974`*^9, 3.873704972779508*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[95]:=",ExpressionUUID->"cca32c44-ca6f-4383-8487-\
+f435721690c5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"dd\[Psi]", "[", "t", "]"}], "\[InvisibleSpace]", "\<\"=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "a"}], " ", "Cyfl"}], "+", 
+        RowBox[{"b", " ", "Cyrl"}]}], ")"}], " ", 
+      RowBox[{"dy", "[", "t", "]"}]}], 
+     RowBox[{"Izz", " ", 
+      RowBox[{"dx", "[", "t", "]"}]}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["a", "2"]}], " ", "Cyfl"}], "-", 
+        RowBox[{
+         SuperscriptBox["b", "2"], " ", "Cyrl"}]}], ")"}], " ", 
+      RowBox[{"d\[Psi]", "[", "t", "]"}]}], 
+     RowBox[{"Izz", " ", 
+      RowBox[{"dx", "[", "t", "]"}]}]], "+", 
+    FractionBox[
+     RowBox[{"Mzinput", "[", "t", "]"}], "Izz"], "+", 
+    FractionBox[
+     RowBox[{"a", " ", "Cyfl", " ", 
+      RowBox[{"\[Delta]f", "[", "t", "]"}]}], "Izz"]}]}],
+  SequenceForm[
+   $CellContext`dd\[Psi][$CellContext`t], 
+   "=", (-$CellContext`a $CellContext`Cyfl + $CellContext`b \
+$CellContext`Cyrl) $CellContext`Izz^(-1) $CellContext`dx[$CellContext`t]^(-1) \
+$CellContext`dy[$CellContext`t] + (-$CellContext`a^2 $CellContext`Cyfl - \
+$CellContext`b^2 $CellContext`Cyrl) $CellContext`Izz^(-1) \
+$CellContext`dx[$CellContext`t]^(-1) $CellContext`d\[Psi][$CellContext`t] + \
+$CellContext`Izz^(-1) $CellContext`Mzinput[$CellContext`t] + $CellContext`a \
+$CellContext`Cyfl $CellContext`Izz^(-1) \
+$CellContext`\[Delta]f[$CellContext`t]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.872022780098056*^9, 3.872022810504259*^9, 3.872022933512207*^9, {
+   3.8720230238716097`*^9, 3.8720230407068343`*^9}, 3.872023578199548*^9, 
+   3.8720513125837593`*^9, 3.8722979365900974`*^9, 3.8737049727860117`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[95]:=",ExpressionUUID->"7029d76f-49fc-4da5-8b02-\
+413112d6138e"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{1067, 785},
+WindowMargins->{{1, Automatic}, {48, Automatic}},
+DockedCells->{},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (2021\:5e747\:670823\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f4c55844-6b72-43e5-a773-fb4b48f4c3ac"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 603, 14, 137, "Code",ExpressionUUID->"6d1918bb-3ab5-48e3-b823-413425717d04"],
+Cell[1186, 38, 3840, 58, 77, "Message",ExpressionUUID->"0097dc67-38fa-459e-a9c8-0ad35a696b53"],
+Cell[5029, 98, 3840, 58, 77, "Message",ExpressionUUID->"956c0ec4-cdde-4d57-a05c-ba498ea100df"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8906, 161, 249, 4, 75, "Section",ExpressionUUID->"f68ae914-d3d1-4a12-9050-53a9bfce32c7"],
+Cell[9158, 167, 1101, 22, 242, "Text",ExpressionUUID->"55e3a984-a70f-47b2-85e1-2d0c178f85d9"]
+}, Open  ]],
+Cell[10274, 192, 157, 3, 75, "Section",ExpressionUUID->"857f841a-dea8-4d25-8f4b-fe73dea0a43c"],
+Cell[CellGroupData[{
+Cell[10456, 199, 208, 4, 59, "Section",ExpressionUUID->"d83646a7-a6e5-46ae-b710-1863539aa70c"],
+Cell[CellGroupData[{
+Cell[10689, 207, 165, 3, 48, "Subsection",ExpressionUUID->"7cb690b6-61f5-4758-9d9b-67543efdaee5"],
+Cell[CellGroupData[{
+Cell[10879, 214, 238, 7, 62, "Subsubsection",ExpressionUUID->"51fe12ca-3e97-42f1-9d5e-6bc65bff7de5"],
+Cell[11120, 223, 1394, 38, 112, "Input",ExpressionUUID->"38a49311-40e0-4ffe-be04-40713bf57035"]
+}, Open  ]],
+Cell[12529, 264, 365, 6, 40, "Subsubsection",ExpressionUUID->"fee643f2-8277-4cbd-9b64-f02487657f6d"],
+Cell[CellGroupData[{
+Cell[12919, 274, 356, 7, 33, "Subsubsection",ExpressionUUID->"e156a7dd-b6c8-4f65-a439-918debc2b046"],
+Cell[13278, 283, 5403, 125, 519, "Input",ExpressionUUID->"7e1c9adc-ae99-47ee-99ad-ada31de76af9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18718, 413, 230, 5, 40, "Subsubsection",ExpressionUUID->"deb0b4d8-8456-45ad-99ea-6a523adf554c"],
+Cell[18951, 420, 1803, 51, 75, "Input",ExpressionUUID->"1e7381d8-c08b-4270-aaed-36c2d25b006a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20791, 476, 230, 4, 40, "Subsubsection",ExpressionUUID->"d92f069f-050a-4e03-a4b9-b52a5b431fd8"],
+Cell[21024, 482, 3146, 89, 78, "Input",ExpressionUUID->"fcad46cd-6f5b-447d-9ffa-8cddac834bc9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24207, 576, 162, 3, 40, "Subsubsection",ExpressionUUID->"6b626583-374c-4471-84a9-688112e8acc9"],
+Cell[24372, 581, 4012, 116, 334, "Input",ExpressionUUID->"44e1324b-eb98-4c6a-8580-a400b9f849b2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28421, 702, 189, 3, 40, "Subsubsection",ExpressionUUID->"f35dd7ee-61d9-4ae6-9781-9d07de5fb70c"],
+Cell[28613, 707, 3584, 109, 262, "Input",ExpressionUUID->"dea00c67-2251-4388-b5ec-00146c819b43"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32234, 821, 271, 4, 51, "Subsubsection",ExpressionUUID->"a3a91faa-3854-43c4-8ecd-20aead1efa5d"],
+Cell[32508, 827, 4495, 138, 464, "Input",ExpressionUUID->"0693832d-ad18-49e3-805a-e1c9d3485f74"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37040, 970, 161, 3, 51, "Subsubsection",ExpressionUUID->"4285180b-7b55-4787-8f3a-38c5813724a4"],
+Cell[CellGroupData[{
+Cell[37226, 977, 1367, 32, 90, "Input",ExpressionUUID->"b8fdd4a7-7b18-4d53-b6b1-5108cabaa99b"],
+Cell[38596, 1011, 14585, 273, 36, "Output",ExpressionUUID->"260b68b3-564a-4579-b0c1-4d98800d7015"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53218, 1289, 1169, 30, 91, "Input",ExpressionUUID->"41a18734-1560-4a85-8079-3d1497d5a5bf"],
+Cell[54390, 1321, 14562, 270, 36, "Output",ExpressionUUID->"be1cac5d-34d8-463b-b0c1-e6a244f7744b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68989, 1596, 1752, 45, 96, "Input",ExpressionUUID->"e846d855-e7ad-4a2b-8af6-a2be90ce399e"],
+Cell[70744, 1643, 27953, 510, 36, "Output",ExpressionUUID->"7dfea86e-912c-498b-8795-941a1fda9c2c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98734, 2158, 1270, 29, 56, "Input",ExpressionUUID->"12eb0dcb-10ef-481f-94c4-aa1bf38070bb"],
+Cell[100007, 2189, 14917, 366, 248, "Output",ExpressionUUID->"0cfc85cc-0a21-4947-80a9-778db2270997"]
+}, Open  ]],
+Cell[114939, 2558, 872, 26, 132, "Input",ExpressionUUID->"3224c683-5123-4eaf-a240-fbcdad8be922"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[115860, 2590, 222, 4, 62, "Subsection",ExpressionUUID->"729e5919-14b7-4cb9-a300-aba2dbdfd4de"],
+Cell[CellGroupData[{
+Cell[116107, 2598, 241, 4, 56, "Subsubsection",ExpressionUUID->"2496ae8e-189c-4258-8594-a5e7c4f61c9d"],
+Cell[116351, 2604, 1530, 38, 192, "Input",ExpressionUUID->"7827536c-8a10-4031-9d63-bd7d48b7bfb6"]
+}, Open  ]]
+}, Closed]],
+Cell[117908, 2646, 77, 0, 43, "Subsection",ExpressionUUID->"8453e6c6-3688-4405-9bc5-2c1f5d61664a"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[118022, 2651, 155, 3, 59, "Section",ExpressionUUID->"51a4e72e-a11a-49aa-afd1-8e04e2d94fe0"],
+Cell[CellGroupData[{
+Cell[118202, 2658, 172, 3, 62, "Subsection",ExpressionUUID->"39aa910f-27a6-4b11-aed5-1913194487f5"],
+Cell[CellGroupData[{
+Cell[118399, 2665, 2045, 58, 176, "Input",ExpressionUUID->"2926d7b7-2e97-4e54-9949-dec48d5b815e"],
+Cell[120447, 2725, 1002, 27, 53, "Output",ExpressionUUID->"7a523174-76b7-4896-b0d5-9d64b3f406f6"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[121498, 2758, 162, 3, 43, "Subsection",ExpressionUUID->"88a31f2c-067f-44ca-a6a7-31eab7521b48"],
+Cell[CellGroupData[{
+Cell[121685, 2765, 1597, 48, 169, "Input",ExpressionUUID->"0345fe32-b2dc-4935-97d1-888cabb0601e"],
+Cell[123285, 2815, 557, 13, 38, "Output",ExpressionUUID->"80e1cdc0-c97a-46b7-8669-a754331dd03f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123903, 2835, 255, 4, 75, "Section",ExpressionUUID->"f52a6d79-44c9-48f7-9d51-a1410630f45e"],
+Cell[124161, 2841, 283, 4, 35, "Text",ExpressionUUID->"e5018469-e7cd-4026-9e62-2b617a2f9491"],
+Cell[124447, 2847, 236, 4, 71, "Input",ExpressionUUID->"d383d738-3f68-4207-9bcb-4a59d827c37f"],
+Cell[CellGroupData[{
+Cell[124708, 2855, 166, 3, 40, "Subsubsection",ExpressionUUID->"8d34825b-60a9-438d-8874-2d3a2b1a1d87"],
+Cell[124877, 2860, 1248, 36, 112, "Input",ExpressionUUID->"234b0694-1bc7-419b-aaff-6510bd5cf874"],
+Cell[126128, 2898, 5419, 148, 450, "Input",ExpressionUUID->"3d895a01-798d-45ea-aab6-c85889672f41"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[131584, 3051, 356, 7, 40, "Subsubsection",ExpressionUUID->"640b8453-69a3-433b-bbd8-eb95b1168645"],
+Cell[131943, 3060, 3848, 89, 252, "Input",ExpressionUUID->"52752017-fe6e-475c-b86c-931a83856b29"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[135828, 3154, 230, 5, 40, "Subsubsection",ExpressionUUID->"4d30ea5b-c0c5-4c59-89ee-16e97b560ada"],
+Cell[136061, 3161, 1803, 51, 75, "Input",ExpressionUUID->"6b408e77-4e3d-413c-b749-d4d9d340516f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[137901, 3217, 162, 3, 40, "Subsubsection",ExpressionUUID->"cf8fcc58-5ffc-4567-ad9d-bfa9e7d9e1e2"],
+Cell[138066, 3222, 1446, 35, 80, "Input",ExpressionUUID->"438a53a9-ff93-4917-b797-5a440b24b2b4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[139549, 3262, 189, 3, 40, "Subsubsection",ExpressionUUID->"0046003f-3c11-4c3a-908e-5e954d71e67e"],
+Cell[139741, 3267, 2009, 52, 112, "Input",ExpressionUUID->"948f5aa9-53df-4342-bc94-7499f86e1741"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[141787, 3324, 161, 3, 40, "Subsubsection",ExpressionUUID->"d7590480-7c09-43d5-b11c-7183a13e580a"],
+Cell[CellGroupData[{
+Cell[141973, 3331, 1469, 33, 90, "Input",ExpressionUUID->"3b372e90-b775-46c1-be6e-19fa33d2890b"],
+Cell[143445, 3366, 1317, 28, 36, "Output",ExpressionUUID->"6fdb3966-2866-4dc5-993d-55fc474cbe84"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144799, 3399, 1335, 33, 91, "Input",ExpressionUUID->"6ee99a73-957a-437d-88b5-5801f9bbf196"],
+Cell[146137, 3434, 1587, 33, 36, "Output",ExpressionUUID->"9f3dc25e-c353-42ef-b13b-677e5994132c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147761, 3472, 1268, 29, 90, "Input",ExpressionUUID->"0ee471b6-dfdf-4008-b841-a86e248ac76a"],
+Cell[149032, 3503, 1630, 33, 36, "Output",ExpressionUUID->"e41aec6b-de7c-4186-8283-6da4d05ed8d7"]
+}, Open  ]],
+Cell[150677, 3539, 1335, 31, 56, "Input",ExpressionUUID->"6847b4c4-6066-4768-a507-f9673ca62cd5"],
+Cell[152015, 3572, 802, 25, 103, "Input",ExpressionUUID->"3e45ba92-71e5-4ce9-aab9-a8efafaa9811"],
+Cell[CellGroupData[{
+Cell[152842, 3601, 1532, 41, 103, "Input",ExpressionUUID->"eda94be3-5913-483e-b9da-f15bcec5e179"],
+Cell[CellGroupData[{
+Cell[154399, 3646, 1004, 23, 36, "Print",ExpressionUUID->"72a4203c-8fab-4f8f-967a-9da5eb5d2df4"],
+Cell[155406, 3671, 1745, 45, 38, "Print",ExpressionUUID->"cca32c44-ca6f-4383-8487-f435721690c5"],
+Cell[157154, 3718, 1956, 50, 41, "Print",ExpressionUUID->"7029d76f-49fc-4da5-8b02-413112d6138e"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
